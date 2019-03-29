@@ -11,21 +11,29 @@ import KPI from './views/KPI'
 import Pact from './views/Pact'
 import Project from './views/Project'
 import Login from './views/Login'
+import Rest from './views/Rest'
+import Attendence from './views/Attendence'
 Vue.use(Router);
 
-export default new Router({
+const router=new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
       path: "/oa",
       name: "oa",
-      component:OA
+      component:OA,
     },
     {
       path: "/me",
       name: "about",
       component:Me
+    },
+    
+    {
+      path: "/news",
+      name: "news",
+      component:News
     },
     {
       path: "/",
@@ -46,6 +54,16 @@ export default new Router({
       path: "/oa/check",
       name: "check",
       component:Check
+    },
+    {
+      path: "/oa/rest",
+      name: "rest",
+      component:Rest
+    },
+    {
+      path: "/oa/attendence",
+      name: "attendence",
+      component:Attendence
     },
     {
       path: "/purchase",
@@ -69,3 +87,5 @@ export default new Router({
     }
   ]
 });
+
+export default router

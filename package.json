@@ -10,6 +10,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-plugin-dynamic-import-node": "^2.2.0",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.4",

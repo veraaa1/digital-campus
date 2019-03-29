@@ -1,0 +1,45 @@
+{
+    "teacherCollections":[
+        {
+                "Tid":"12334454",
+                "Tname":"小贺贺",
+                "Tsex":"女",
+                "Tage":"20",
+                "Tbrithday":"1997/12/18",
+                "TCardId":"123456789012345678",
+                "Tphone":"12345678901",
+                "Taddress":"杭州市-西湖区-浙江大学",
+                "Tpwd":"123456",
+                "Temail":"123456@qq.com",
+                "TeachId":"001",
+                "TeachCareer":"校长",
+                "TeachYear":5,
+                "TeachSalary":10000,
+                "TeachDepartMent":"总部",
+                "enterTime":"2009/8/20",
+                "leaveTime":"--"
+            
+        },
+        {
+           
+                "Tid":"123323454",
+                "Tname":"小钟钟",
+                "Tsex":"男",
+                "Tage":"40",
+                "Tbrithday":"1997/12/18",
+                "TCardId":"123456789012345678",
+                "Tphone":"12345678901",
+                "Taddress":"杭州市-西湖区-浙江大学",
+                "Tpwd":"123456",
+                "Temail":"123456@qq.com",
+                "TeachId":"001",
+                "TeachCareer":"校长秘书",
+                "TeachYear":5,
+                "TeachSalary":10000,
+                "TeachDepartMent":"总部",
+                "enterTime":"2009/8/20",
+                "leaveTime":"--"
+            
+        }
+    ]
+}

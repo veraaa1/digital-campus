@@ -1,11 +1,19 @@
 <template>
   <div class="news">
-    <h1>This is an news</h1>
+    <h1>{{user}},欢迎来访</h1>
   </div>
 </template>
 <script>
 export default {
-  name:"news"
+  name:"news",
+  data:()=>({
+    
+  }),
+ computed:{
+   user(){
+     return window.sessionStorage.getItem('userName')
+   }
+ },
 }
 </script>
 <style lang="scss" scoped>

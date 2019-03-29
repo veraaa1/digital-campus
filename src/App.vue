@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view />
-    <Footer/>
+     <Footer v-if="isLogin"/>
   </div>
 </template>
 <script>
@@ -9,6 +9,15 @@ import Footer from './views/Footer'
 export default {
   components:{
     Footer
+  },
+  computed:{
+    isLogin(){
+      return sessionStorage.getItem('userName')?true:false
+    }
+  },
+  mounted(){
+    console.log(this.isLogin);
+    
   }
 }
 </script>

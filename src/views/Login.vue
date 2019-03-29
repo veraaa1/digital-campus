@@ -3,18 +3,34 @@
     <h1>登录</h1>
     <form action="">
         <label for="username">用户名</label>
-        <input type="text" id="username">
+        <input type="text" id="username" v-model="userName">
         <label for="pwd">密码</label>
-        <input type="password" id="pwd">
-        <button type="submit">登录</button>
+        <input type="password" id="pwd" v-model="pwd">
+        <span>{{currentUser}}</span>
+         <a href="javascript:;" @click="login">登录</a>
     </form>
   </div>
 </template>
 <script>
 export default {
   name:"login",
-  created(){
-   
+  data:()=>({
+    userName:"",
+    pwd:"",
+    user:null,
+    
+  }),
+  computed:{
+    currentUser(){
+      return this.$store.state.teacherCollections
+    }
+  },
+  methods:{
+    login(){
+      if(this.pwd.trim()&&this.userName.trim())
+      this.$store.dispatch('getTCollections',{userName:this.userName,pwd:this.pwd})
+       this.$router.push({path:"/news"})
+    }
   }
 }
 </script>

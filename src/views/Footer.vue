@@ -2,7 +2,7 @@
 <footer>
   <mt-tabbar v-model="selected">
   <mt-tab-item id="news" class="all-change">
-    <router-link to="/">
+    <router-link to="/news">
       <img src="../assets/logo.png">
       <span>消息</span>
     </router-link>
