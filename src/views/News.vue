@@ -1,6 +1,6 @@
 <template>
   <div class="news">
-    <h1>{{user}},欢迎来访</h1>
+    <h1>{{user.Tname}},欢迎来访</h1>
   </div>
 </template>
 <script>
@@ -11,7 +11,7 @@ export default {
   }),
  computed:{
    user(){
-     return window.sessionStorage.getItem('userName')
+     return JSON.parse(sessionStorage.getItem('userInfo'))
    }
  },
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="oa">
-    <h1>This is an oa,{{user}}</h1>
+    <h1>This is an oa,{{user.Tname}}</h1>
     <router-link to="/oa/check">审批</router-link>
     <router-link to="/oa/rest">请假</router-link>
     <router-link to="/oa/attendence">考勤</router-link>
@@ -11,7 +11,7 @@ export default {
   name:"oa",
   computed:{
    user(){
-     return sessionStorage.getItem('userName')
+     return JSON.parse(sessionStorage.getItem('userInfo'))
    }
  }
 }

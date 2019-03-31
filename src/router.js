@@ -13,6 +13,9 @@ import Project from './views/Project'
 import Login from './views/Login'
 import Rest from './views/Rest'
 import Attendence from './views/Attendence'
+import Department from './views/DepartMent'
+import Orgnization from './views/Orgnization'
+import IDCard from './views/IDCard'
 Vue.use(Router);
 
 const router=new Router({
@@ -84,6 +87,20 @@ const router=new Router({
       path:'/project',
       name:'project',
       component:Project
+    },
+    {
+      path:'/contact/department',
+      name:'department',
+      component:Department
+    },{
+      path:'/contact/department/:org',
+      name:'org',
+      component:Orgnization
+    },
+    ,{
+      path:'/contact/orgnization/:id',
+      name:'id',
+      component:IDCard
     }
   ]
 });

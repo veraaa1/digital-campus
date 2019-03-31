@@ -6,7 +6,6 @@
         <input type="text" id="username" v-model="userName">
         <label for="pwd">密码</label>
         <input type="password" id="pwd" v-model="pwd">
-        <span>{{currentUser}}</span>
          <a href="javascript:;" @click="login">登录</a>
     </form>
   </div>
@@ -21,9 +20,6 @@ export default {
     
   }),
   computed:{
-    currentUser(){
-      return this.$store.state.teacherCollections
-    }
   },
   methods:{
     login(){

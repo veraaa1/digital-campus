@@ -12,7 +12,7 @@ export default {
   },
   computed:{
     isLogin(){
-      return sessionStorage.getItem('userName')?true:false
+      return JSON.parse(sessionStorage.getItem('userInfo'))?true:false
     }
   },
   mounted(){
