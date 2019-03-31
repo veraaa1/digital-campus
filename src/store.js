@@ -21,7 +21,7 @@ export default new Vuex.Store({
     getTCollections({commit},obj){
       console.log(obj);
       var self = this
-      axios.get(`http://localhost:3008/teacherCollections?Tname=${obj.userName}&Tpwd=${obj.pwd}`).then(res=>{
+      axios.get(`http://localhost:3008/teacherCollections?Tname=${obj.userName}`).then(res=>{
         console.log(res.data)
         sessionStorage.setItem('userName',res.data[0].Tname)
         sessionStorage.setItem('pwd',res.data[0].Tpwd)
