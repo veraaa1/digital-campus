@@ -1,13 +1,15 @@
 <template>
   <div class="login">
-    <h1>登录</h1>
-    <form action="">
-        <label for="username">用户名</label>
-        <input type="text" id="username" v-model="userName">
-        <label for="pwd">密码</label>
-        <input type="password" id="pwd" v-model="pwd">
-         <a href="javascript:;" @click="login">登录</a>
-    </form>
+   
+    <el-form label-position="right" label-width="80px" >
+      <el-form-item label="用户名">
+        <el-input v-model="userName"></el-input>
+      </el-form-item>
+      <el-form-item label="密码">
+        <el-input v-model="pwd" type="password"></el-input>
+      </el-form-item>
+      <el-button type="primary" @click="login">登录</el-button>
+    </el-form>
   </div>
 </template>
 <script>

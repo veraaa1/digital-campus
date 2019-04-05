@@ -1,7 +1,13 @@
 <template>
   <div class="kpi">
-    <h1>绩效自评</h1>
-    <el-form>
+    <mt-header title="绩效自评" fixed>
+    <router-link to="/oa/check" slot="left">
+        <mt-button icon="back">返回</mt-button>
+    </router-link>
+    <mt-button icon="more" slot="right"></mt-button>
+    </mt-header>
+    <div class="kpi-con">
+      <el-form>
       <span>审批人</span>
       <router-link to="/">添加审批人</router-link>
       <el-form-item label="上月教学任务">
@@ -24,6 +30,8 @@
       </el-form-item>  
       <el-button type="primary">提交</el-button>
     </el-form>
+    </div>
+    
   </div>
 </template>
 <script>
@@ -34,7 +42,8 @@ export default {
 <style lang="scss" scoped>
 .kpi{
     width: 100vw;
-    height: calc(100vh - 66px);
+    height: calc(100vh - 66px - 40px);
+    margin-top: 40px;
     overflow: hidden;
     overflow-y: auto;
     form{

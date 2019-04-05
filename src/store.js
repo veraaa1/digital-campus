@@ -27,11 +27,18 @@ export default new Vuex.Store({
     checkNameArr(state,str){
       state.checkNameArr.push(str)
     },
+    removeCheckName(state,item){
+      state.checkNameArr=state.checkNameArr.filter((e)=>e!=item)
+    },
     confirmPurchaseCheck(state,obj){
       state.teacherCollections.myapprove.push(obj)
     },
     addEvent(state,obj){
       state.teacherCollections.mydayliredords.push(obj)
+    },
+    autoAddCheck(state,item){
+      if(state.checkNameArr.indexOf(item)===-1)
+      state.checkNameArr.push(item)
     }
   },
   actions: {
@@ -72,6 +79,17 @@ export default new Vuex.Store({
       dayliredords.push(obj)
       axios.patch(`http://localhost:3008/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{mydayliredords:dayliredords}).then(res=>{
         commit('addEvent',obj)
+      })
+    },
+    removeCheckName({commit},item){
+      commit('removeCheckName',item)
+    },
+    autoAddCheck({commit,state},type){
+      axios.get(`http://localhost:3008/teacherCollections?TeachCareer=${type}`).then(res=>{
+        const Tarr = res.data
+        const randInd = Math.floor(Math.random(0,1)*Tarr.length)
+        console.log(randInd);
+        commit('autoAddCheck',Tarr[randInd].Tname)
       })
     }
   }
