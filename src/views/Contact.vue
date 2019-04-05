@@ -15,7 +15,6 @@ export default {
     user(){
       return JSON.parse(sessionStorage.getItem('userInfo'))
     },
-
   }
 }
 </script>

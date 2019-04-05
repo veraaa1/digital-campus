@@ -6,7 +6,10 @@ import "./registerServiceWorker";
 import "./mint-ui"
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import FullCalendar from 'vue-full-calendar'
+import 'fullcalendar/dist/fullcalendar.css'
 Vue.config.productionTip = false;
+Vue.use(FullCalendar)
 Vue.use(ElementUI);
 new Vue({
   router,

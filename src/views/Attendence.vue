@@ -10,7 +10,6 @@ export default {
 name:'attendence'
 }
 </script>
-
 <style lang="scss" scoped>
 
 </style>

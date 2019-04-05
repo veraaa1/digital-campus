@@ -14,6 +14,9 @@ export default {
      return JSON.parse(sessionStorage.getItem('userInfo'))
    }
  },
+ created(){
+    this.$store.dispatch('getTCollections',{userName:this.user.Tname,pwd:this.user.Tpwd})
+ }
 }
 </script>
 <style lang="scss" scoped>

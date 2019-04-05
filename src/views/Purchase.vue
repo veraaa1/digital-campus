@@ -1,7 +1,19 @@
 <template>
   <div class="purchase">
-    <h1>采购审批</h1>
+    <mt-header title="采购审批" fixed>
+    <router-link to="/oa/check" slot="left">
+        <mt-button icon="back">返回</mt-button>
+    </router-link>
+    <mt-button icon="more" slot="right"></mt-button>
+    </mt-header>
     <form action="">
+        <span>审批人</span>
+        <a @click="addCheckPerson">添加审批人</a>
+        <ul>
+            <li v-for="item in checkMenlists" :key="item">
+                <p>{{item}}<span>×</span></p>
+            </li>
+        </ul>
         <label for="reason">申请事由</label>
         <el-input type="text" id="reason" v-model="purchaseForm.reason" placeholder="请输入申请事由" @blur="isEmpty(purchaseForm.reason)"></el-input>
         <label for="type">采购类型</label>
@@ -33,12 +45,12 @@
         <label for="size">规格</label>
         <el-input type="text" id="size" v-model="purchaseForm.pSize" placeholder="请输入规格" @blur="isEmpty(purchaseForm.pSize)"></el-input>
         <label for="number">数量</label>
-        <el-input-number v-model="purchaseForm.pNum" @change="handleChange" :min="1" :max="10" label="请输入数量" ></el-input-number>
+        <el-input-number v-model="purchaseForm.pNum" @change="handleChange" :min="1" label="请输入数量" ></el-input-number>
         <label for="part">单位</label>
         <el-input type="text" id="part" v-model="purchaseForm.pPart" placeholder="请输入单位" @blur="isEmpty(purchaseForm.pPart)"></el-input>
         <label for="price">价格</label>
         <el-input type="text" id="price" v-model="purchaseForm.pPrice" placeholder="请输入价格"></el-input>
-        <span>总价格:{{}}</span>
+        <span>总价格:{{(purchaseForm.pNum* purchaseForm.pPrice).toFixed(2)}}元</span>
         <label for="pay-type">支付方式</label>
         <el-select name="" id="pay-type" v-model="purchaseForm.payType">
             <el-option value="money" label="现金">现金</el-option>
@@ -48,24 +60,19 @@
         </el-select>
         <label for="more">备注</label>
         <el-input type="textarea" name="" id="more" cols="30" rows="10" v-model="purchaseForm.pMore" @blur="isEmpty(purchaseForm.pMore)"></el-input>
-        <span>审批人</span>
-        <a @click="addCheckPerson">添加审批人</a>
-        <ul>
-            <li v-for="item in checkMenlists" :key="item">
-                <p>{{item}}<span>×</span></p>
-            </li>
-        </ul>
-        <el-button type="primary"
+
+        <el-button type="primary" @click="confirmPurchase"
         >提交审批</el-button>
     </form>
   </div>
 </template>
 <script>
+import {MessageBox} from 'mint-ui'
 export default {
   name:"purchase",
   data:()=>({
       purchaseForm:{
-          startDate: new Date('2019-01-01'),
+          startDate: new Date(),
           reason:'',
           pType:'',
           deadDate:"", 
@@ -93,7 +100,13 @@ export default {
      this.purchaseForm.deadDate = `${data.getFullYear()}年${data.getMonth()+1}月${data.getDate()}日`;   //获取的时间为时间戳，getdata是自己写的一个转换时间的方法
     },
     confirmPurchase(){
-        
+        console.log(this.purchaseForm);
+        this.$store.dispatch('confirmPurchaseCheck',this.purchaseForm)
+        MessageBox.alert('您的采购审批提交成功，已送达审批人','温馨提示').then(action => {
+            this.$router.push({
+                path:'/oa/check'
+            })
+        });
     },
     handleChange(value) {
         console.log(value);
@@ -109,14 +122,18 @@ export default {
             path:'/contact/department'
         })
     }
+  },
+  mounted(){
+      this.$store.dispatch('getAll')
   }
 }
 </script>
 <style lang="scss" scoped>
 .purchase{
-    height: calc(100vh - 66px);
+    height: calc(100vh - 66px - 40px);
     overflow: hidden;
     overflow-y: auto;
+    margin-top: 40px;
     >form{
         display: flex;
         flex-direction: column

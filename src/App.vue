@@ -13,12 +13,19 @@ export default {
   computed:{
     isLogin(){
       return JSON.parse(sessionStorage.getItem('userInfo'))?true:false
-    }
+    },
+    sessionUser(){
+    return JSON.parse(sessionStorage.getItem('userInfo'))
+  }
   },
   mounted(){
     console.log(this.isLogin);
     
+  },
+  created(){
+    this.$store.dispatch('getAll')
   }
+  
 }
 </script>
 

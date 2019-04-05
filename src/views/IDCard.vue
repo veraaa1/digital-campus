@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>{{singlePerson.Tname}}(工号：{{singlePerson.Tid}})</p>
+        <p>{{singlePerson.Tname}}(工号：{{singlePerson.id}})</p>
         <p>{{singlePerson.TeachDepartMent}}</p>
         <p>{{singlePerson.TeachCareer}}</p>
         <p>{{singlePerson.Torgnization}}</p>
@@ -26,7 +26,7 @@ methods:{
 },
 computed:{
     singlePerson(){
-        let arr = this.$store.state.all.filter(e=>e.Tid==this.$route.params.id)
+        let arr = this.$store.state.all.filter(e=>e.id==this.$route.params.id)
         return arr[0]
     }
     

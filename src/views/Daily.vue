@@ -1,40 +1,66 @@
 <template>
   <div class="daily">
-    <h1>DING!</h1>
-    <el-button>111</el-button>
-    <Calendar
-      v-on:choseDay="clickDay"
-      v-on:changeMonth="changeDate"
-      v-on:isToday="clickToday"
-      :markDate="arr"
-      :markDateMore="arr"
-    ></Calendar>
+     <mt-header title="DING" fixed>
+    <router-link to="/oa/check" slot="left">
+        <mt-button icon="back">返回</mt-button>
+    </router-link>
+    <mt-button icon="more" slot="right"></mt-button>
+    </mt-header>
+    <el-form action="">
+      <el-form-item label="活动名称">
+        <el-input v-model="currentVal"></el-input>
+      </el-form-item>
+    </el-form>
+    <FullCalendar :events="user.mydayliredords" :config="config" @day-click="clickDay" @event-created="createEvent" @event-selected="onChange"/>
   </div>
 </template>
 <script>
-import Calendar from 'vue-calendar-component';
+import { FullCalendar } from 'vue-full-calendar'
+import 'fullcalendar/dist/locale/zh-cn'
+import {MessageBox} from 'mint-ui'
 export default {
   name:"daily",
   components:{
-    Calendar
+   FullCalendar
   },
+  
   data:()=>({
-    arr:[{date:'2018/4/1',className:"mark1"}, {date:'2018/4/13',className:"mark2"}]
+    currentVal:'',
+    events: [],
+      config: {
+        locale: 'zh-cn',
+      },
   }),
   methods:{
+    onChange(event, jsEvent, view){
+     MessageBox('日程',`${event.title}`)
+     
+    },
     clickDay(data) {
-      console.log(data); //选中某天
+      console.log(data._d.toLocaleDateString()); //选中某天
     },
-    changeDate(data) {
-      console.log(data); //左右点击切换月份
-    },
-    clickToday(data) {
-      console.log(data); //跳到了本月
+    createEvent(event){
+      event.title = this.currentVal
+      event.resource = this.$store.state.teacherCollections.mydayliredords
+      console.log(event);
+      this.$store.dispatch('addEvent',{title:event.title,start:event.start,end:event.end,allDay:event.allDay})
     }
-
-  }
+  },
+  computed:{
+   user(){
+     return this.$store.state.teacherCollections?this.$store.state.teacherCollections:{}
+   },
+ },
+ created(){
+  //  this.events = [...this.user.mydayliredords]
+ }
 }
 </script>
 <style lang="scss" scoped>
-
+.daily{
+    height: calc(100vh - 66px - 40px);
+    overflow: hidden;
+    overflow-y: auto;
+    margin-top: 40px;
+}
 </style>

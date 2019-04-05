@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    teacherCollections:[],
+    teacherCollections:null,
     all:null,
     checkStatus:false,
     checkNameArr:[]
@@ -26,6 +26,12 @@ export default new Vuex.Store({
     },
     checkNameArr(state,str){
       state.checkNameArr.push(str)
+    },
+    confirmPurchaseCheck(state,obj){
+      state.teacherCollections.myapprove.push(obj)
+    },
+    addEvent(state,obj){
+      state.teacherCollections.mydayliredords.push(obj)
     }
   },
   actions: {
@@ -51,6 +57,22 @@ export default new Vuex.Store({
     },
     checkNameArr({commit},Tname){
       commit('checkNameArr',Tname)
+    },
+    confirmPurchaseCheck({commit,state},obj){
+      let newObj = state.all.find(e=>e.Tname===JSON.parse(sessionStorage.getItem('userInfo')).Tname)
+      let approve=[...newObj.myapprove]
+      approve.push(obj)
+      axios.patch(`http://localhost:3008/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{myapprove:approve}).then(res=>{
+        commit('confirmPurchaseCheck',obj)
+      })
+    },
+    addEvent({commit,state},obj){
+      let newObj = state.all.find(e=>e.Tname===JSON.parse(sessionStorage.getItem('userInfo')).Tname)
+      let dayliredords=[...newObj.mydayliredords]
+      dayliredords.push(obj)
+      axios.patch(`http://localhost:3008/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{mydayliredords:dayliredords}).then(res=>{
+        commit('addEvent',obj)
+      })
     }
   }
 });

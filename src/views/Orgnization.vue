@@ -1,7 +1,7 @@
 <template>
     <ul>
-        <li v-for="item in filterMember" :key="item.Tid">
-            <router-link :to="`/contact/orgnization/${item.Tid}`"><p><span>{{item.Tname}}</span><span>{{item.TeachCareer}}</span></p></router-link>
+        <li v-for="item in filterMember" :key="item.id">
+            <router-link :to="`/contact/orgnization/${item.id}`"><p><span>{{item.Tname}}</span><span>{{item.TeachCareer}}</span></p></router-link>
         </li>
     </ul>
 </template>
