@@ -117,7 +117,7 @@ export default {
         this.$store.dispatch('confirmPurchaseCheck',this.purchaseForm)
         MessageBox.alert('您的采购审批提交成功，已送达审批人','温馨提示').then(action => {
             this.$router.push({
-                path:'/oa/check'
+                path:'/oa/check/mycreatecheck'
             })
         });
     },

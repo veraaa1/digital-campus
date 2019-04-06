@@ -43,6 +43,13 @@ export default new Vuex.Store({
     autoAddCheck(state,item){
       if(state.checkNameArr.indexOf(item)===-1)
       state.checkNameArr.push(item)
+    },
+    // 审批通过
+    passCheck(state,card){
+      console.log(state.all.find(e=>e.id == card));
+      
+      state.all.find(e=>e.id == card).myapprove.find(e=>e.checkMen.indexOf(JSON.parse(sessionStorage.getItem('userInfo')).Tname)!= -1).checkStatus  = 1
+      state.all = [...state.all]  
     }
   },
   actions: {
@@ -99,6 +106,20 @@ export default new Vuex.Store({
         const randInd = Math.floor(Math.random(0,1)*Tarr.length)
         console.log(randInd);
         commit('autoAddCheck',Tarr[randInd].Tname)
+      })
+    },
+    // 审批通过
+    passCheck({commit,state},card){
+      console.log(card);
+      
+      console.log(state.all.find(e=>e.id == card));
+      
+      state.all.find(e=>e.id == card).myapprove.find(e=>e.checkMen.indexOf(JSON.parse(sessionStorage.getItem('userInfo')).Tname)!= -1).checkStatus = 1
+      state.all.find(e=>e.id == card).myapprove= [...state.all.find(e=>e.id == card).myapprove]
+      axios.patch(`http://localhost:3008/teacherCollections/${card}`,{
+        myapprove: [...state.all.find(e=>e.id == card).myapprove]
+      }).then(res=>{
+        commit('passCheck',card)
       })
     }
   }

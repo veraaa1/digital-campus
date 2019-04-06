@@ -60,6 +60,26 @@
             "郑赵小"
           ],
           "checkStatus": 0
+        },
+        {
+          "startDate": "2019-04-06T15:19:23.303Z",
+          "reason": "惠普电脑采购",
+          "pType": "hardware",
+          "deadDate": "2019年7月12日",
+          "pName": "惠普笔记本",
+          "pSize": "R221",
+          "pNum": 50,
+          "pPart": "台",
+          "pPrice": "5999",
+          "payType": "bank",
+          "pMore": "货到付款，用于办公室办公。",
+          "checkMen": [
+            "小贺贺"
+          ],
+          "checkStatus": 1,
+          "checkName": "吴王吴",
+          "Tcard": "251595882288210379",
+          "id": "649186662"
         }
       ],
       "myattendencerecords": [],
@@ -352,7 +372,7 @@
         },
         {
           "startDate": "2019-04-05T04:57:51.816Z",
-          "reason": "111",
+          "reason": "全区",
           "pType": "tools",
           "deadDate": "2019年4月8日",
           "pName": "11",
@@ -365,7 +385,10 @@
           "checkMen": [
             "吴王吴"
           ],
-          "checkStatus": 0
+          "checkStatus": 1,
+          "checkName": "小贺贺",
+          "Tcard": "123456789012345678",
+          "id": "12334454"
         },
         {
           "startDate": "2019-04-05T09:24:52.485Z",
@@ -400,7 +423,10 @@
             "王风周",
             "吴王吴"
           ],
-          "checkStatus": 0
+          "checkStatus": 0,
+          "checkName": "小贺贺",
+          "Tcard": "123456789012345678",
+          "id": "12334454"
         }
       ],
       "myattendencerecords": [],

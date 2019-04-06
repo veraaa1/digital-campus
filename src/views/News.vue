@@ -9,8 +9,6 @@ export default {
 
  computed:{
    user(){
-     console.log(this.$store.state.all);
-     
      return this.$store.state.all?this.$store.state.all.find(e=>e.TCardId == sessionStorage.getItem('Tcard')):JSON.parse(sessionStorage.getItem('userInfo'))
    }
  },

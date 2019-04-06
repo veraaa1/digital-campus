@@ -18,7 +18,7 @@ import Orgnization from './views/Orgnization'
 import IDCard from './views/IDCard'
 import CheckDetail from './views/CheckDetail'
 import MyCheck from './views/MyCheck'
-import CacheBuf from './views/CacheBuf'
+import NeedCheck from './views/NeedCheck'
 Vue.use(Router);
 
 const router=new Router({
@@ -110,9 +110,12 @@ const router=new Router({
       name:'mycheck',
       component:CheckDetail
     },{
-      path:'/buf',
-      name:'buf',
-      component:CacheBuf
+      path:'/oa/check/mycheck',
+      name:'mycheckneed',
+      component:MyCheck
+    },{
+      path:'/oa/check/checkdetail/needcheck/:reason',
+      component:NeedCheck
     }
   ]
 });
