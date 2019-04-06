@@ -45,10 +45,11 @@ export default new Vuex.Store({
       state.checkNameArr.push(item)
     },
     // 审批通过
-    passCheck(state,card){
+    passCheck(state,{card,reason}){
       console.log(state.all.find(e=>e.id == card));
-      
-      state.all.find(e=>e.id == card).myapprove.find(e=>e.checkMen.indexOf(JSON.parse(sessionStorage.getItem('userInfo')).Tname)!= -1).checkStatus  = 1
+      console.log(state.all.find(e=>e.id == card).myapprove.find(e=>e.reason == reason));
+      let item = state.all.find(e=>e.id == card).myapprove.find(e=>e.reason ==reason)
+      item.checkStatus = 1
       state.all = [...state.all]  
     }
   },
@@ -109,17 +110,18 @@ export default new Vuex.Store({
       })
     },
     // 审批通过
-    passCheck({commit,state},card){
+    passCheck({commit,state},{card,reason}){
       console.log(card);
+      console.log(reason);
+      let item = state.all.find(e=>e.id == card).myapprove.find(e=>e.reason ==reason)
+      item.checkStatus = 1
       
-      console.log(state.all.find(e=>e.id == card));
       
-      state.all.find(e=>e.id == card).myapprove.find(e=>e.checkMen.indexOf(JSON.parse(sessionStorage.getItem('userInfo')).Tname)!= -1).checkStatus = 1
       state.all.find(e=>e.id == card).myapprove= [...state.all.find(e=>e.id == card).myapprove]
       axios.patch(`http://localhost:3008/teacherCollections/${card}`,{
         myapprove: [...state.all.find(e=>e.id == card).myapprove]
       }).then(res=>{
-        commit('passCheck',card)
+        commit('passCheck',{card,reason})
       })
     }
   }

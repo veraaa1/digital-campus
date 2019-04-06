@@ -45,30 +45,36 @@ export default {
         }
     },
     watch:{
-        // all(){
-        //     console.log(this.all,this.user.Tname);
-        //     var self =this
-        //     this.all.forEach(function(curVal,index){
-        //         curVal.myapprove.forEach(function(e,ind){
-        //             if(e.checkMen.indexOf(self.user.Tname) != -1){
-        //                  e.checkName=curVal.Tname
-        //                 self.checkList.push(e)
-        //             }
-        //         })
-        //         })
-        // }
+        all(){
+            console.log(this.all,this.user.Tname);
+            var self =this
+            this.all.forEach(function(curVal,index){
+                curVal.myapprove.forEach(function(e,ind){
+                    if(e.checkMen.indexOf(self.user.Tname) != -1){
+                        e.checkName=curVal.Tname
+                         e.Tcard = curVal.TCardId
+                        self.checkList.push(e)
+                    }
+                })
+                })
+        }
     },
     created(){ 
         var self =this
         this.$nextTick(function(){
+           
             self.all.forEach(function(curVal,index){
-                curVal.myapprove.forEach(function(e,ind){
+                    curVal.myapprove.forEach(function(e,ind){
                     if(e.checkMen.indexOf(self.user.Tname) != -1){
+                        console.log(e);
+                        
                          e.checkName=curVal.Tname
                          e.Tcard = curVal.TCardId
                         self.checkList.push(e)
                     }
                 })
+                
+                
                 })
       })
     }

@@ -355,7 +355,7 @@
       "myapprove": [
         {
           "startDate": "2019-01-01T00:00:00.000Z",
-          "reason": "11",
+          "reason": "Bu",
           "pType": "books",
           "deadDate": "2020年3月1日",
           "pName": "111",
@@ -368,7 +368,10 @@
           "checkMen": [
             "王风周"
           ],
-          "checkStatus": 0
+          "checkStatus": 1,
+          "checkName": "小贺贺",
+          "Tcard": "123456789012345678",
+          "id": "12334454"
         },
         {
           "startDate": "2019-04-05T04:57:51.816Z",
@@ -405,7 +408,10 @@
           "checkMen": [
             "王风周"
           ],
-          "checkStatus": 0
+          "checkStatus": 1,
+          "checkName": "小贺贺",
+          "Tcard": "123456789012345678",
+          "id": "12334454"
         },
         {
           "startDate": "2019-04-05T09:30:12.104Z",
@@ -423,7 +429,7 @@
             "王风周",
             "吴王吴"
           ],
-          "checkStatus": 0,
+          "checkStatus": 1,
           "checkName": "小贺贺",
           "Tcard": "123456789012345678",
           "id": "12334454"
