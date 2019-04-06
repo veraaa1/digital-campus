@@ -2,13 +2,13 @@
   <div class="login">
    
     <el-form label-position="right" label-width="80px" >
-      <el-form-item label="用户名">
-        <el-input v-model="userName"></el-input>
+      <el-form-item label="工号">
+        <el-input v-model="cardId"></el-input>
       </el-form-item>
       <el-form-item label="密码">
         <el-input v-model="pwd" type="password"></el-input>
       </el-form-item>
-      <el-button type="primary" @click="login">登录</el-button>
+      <el-button type="primary" @click="login" :pwd="pwd" :cardId="cardId">登录</el-button>
     </el-form>
   </div>
 </template>
@@ -16,19 +16,41 @@
 export default {
   name:"login",
   data:()=>({
-    userName:"",
     pwd:"",
     user:null,
-    
+    cardId:''
   }),
+  inject:['reload'],
   computed:{
   },
   methods:{
     login(){
-      if(this.pwd.trim()&&this.userName.trim())
-      this.$store.dispatch('getTCollections',{userName:this.userName,pwd:this.pwd})
-       this.$router.push({path:"/news"})
+      if(this.pwd.trim()&&this.cardId.trim())
+      {
+        console.log(this.$store.state.all.find(e=>e.TCardId == this.cardId));
+        
+        if(this.$store.state.all.find(e=>e.TCardId == this.cardId && e.Tpwd == this.pwd)){
+           sessionStorage.setItem('Tcard',this.cardId)
+           sessionStorage.setItem('Tpwd',this.pwd)
+           console.log(sessionStorage.getItem('Tpwd'));
+             this.reload()
+              this.$router.push({
+             path:'/news'
+           })
+           
+          
+           
+        }else{
+          alert('工号和密码不匹配，请重新输入')
+        }
+      }else{
+        alert('您输入字段有误,请重新输入')
+      }
+       
     }
+  },
+  beforeUpdate(){
+    
   }
 }
 </script>

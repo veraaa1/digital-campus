@@ -45,7 +45,14 @@
       "leaveTime": "--",
       "myapprove": [],
       "myattendencerecords": [],
-      "mydayliredords": [],
+      "mydayliredords": [
+        {
+          "title": "看牙",
+          "start": "2019-04-06T00:00:00",
+          "end": "2019-04-06T01:00:00",
+          "allDay": false
+        }
+      ],
       "myrest": []
     },
     {
@@ -322,7 +329,8 @@
           "pMore": "11",
           "checkMen": [
             "王风周"
-          ]
+          ],
+          "checkStatus": 0
         },
         {
           "startDate": "2019-04-05T04:57:51.816Z",
@@ -338,7 +346,8 @@
           "pMore": "1111",
           "checkMen": [
             "吴王吴"
-          ]
+          ],
+          "checkStatus": 0
         },
         {
           "startDate": "2019-04-05T09:24:52.485Z",
@@ -354,7 +363,8 @@
           "pMore": "11",
           "checkMen": [
             "王风周"
-          ]
+          ],
+          "checkStatus": 0
         },
         {
           "startDate": "2019-04-05T09:30:12.104Z",
@@ -371,53 +381,28 @@
           "checkMen": [
             "王风周",
             "吴王吴"
-          ]
+          ],
+          "checkStatus": 0
         }
       ],
       "myattendencerecords": [],
       "mydayliredords": [
         {
-          "title": "英语课",
-          "start": "2019-04-05"
-        },
-        {
-          "title": "陪孩子逛街",
-          "start": "2019-04-06",
-          "end": "2019-04-07"
-        },
-        {
-          "title": "复习教案",
-          "start": "2019-04-08T12:30:00",
+          "title": "哦哦",
+          "start": "2019-04-06T02:30:00",
+          "end": "2019-04-06T03:30:00",
           "allDay": false
         },
         {
-          "title": "看宝宝",
-          "start": "2019-04-05T01:00:00",
-          "end": "2019-04-05T02:00:00",
+          "title": "111",
+          "start": "2019-04-06T04:30:00",
+          "end": "2019-04-06T05:00:00",
           "allDay": false
         },
         {
-          "title": "看牙",
-          "start": "2019-04-06T02:00:00",
-          "end": "2019-04-06T03:00:00",
-          "allDay": false
-        },
-        {
-          "title": "码代码",
-          "start": "2019-04-05T03:00:00",
-          "end": "2019-04-05T06:30:00",
-          "allDay": false
-        },
-        {
-          "title": "买衣服",
-          "start": "2019-04-07T11:00:00",
-          "end": "2019-04-07T12:00:00",
-          "allDay": false
-        },
-        {
-          "title": "fff",
-          "start": "2019-04-01T00:00:00",
-          "end": "2019-04-01T02:00:00",
+          "title": "1122",
+          "start": "2019-04-06T00:30:00",
+          "end": "2019-04-06T01:30:00",
           "allDay": false
         }
       ],

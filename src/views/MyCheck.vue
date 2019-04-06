@@ -1,15 +1,16 @@
 <template>
-  <div class="me">
-    <h1>This is an me</h1>
-  </div>
+    <div class="my-check">
+        
+    </div>
 </template>
+
 <script>
 export default {
-  name:"me",
-  
+    name:'myCheck',
+
 }
 </script>
+
 <style lang="scss" scoped>
 
 </style>
-

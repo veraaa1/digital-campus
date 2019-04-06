@@ -6,16 +6,16 @@
 <script>
 export default {
   name:"news",
-  data:()=>({
-    
-  }),
+
  computed:{
    user(){
-     return JSON.parse(sessionStorage.getItem('userInfo'))
+     console.log(this.$store.state.all);
+     
+     return this.$store.state.all?this.$store.state.all.find(e=>e.TCardId == sessionStorage.getItem('Tcard')):JSON.parse(sessionStorage.getItem('userInfo'))
    }
  },
  created(){
-    this.$store.dispatch('getTCollections',{userName:this.user.Tname,pwd:this.user.Tpwd})
+   this.$store.dispatch('getTCollections')
  }
 }
 </script>

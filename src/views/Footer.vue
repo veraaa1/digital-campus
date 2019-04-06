@@ -38,14 +38,7 @@
 export default {
 name:"tabbar",
 data:()=>({selected:"news"}),
-  computed:{
-  sessionUser(){
-    return JSON.parse(sessionStorage.getItem('userInfo'))
-  }
- },
- created(){
-   this.$store.dispatch('getTCollections',{userName:this.sessionUser.Tname,pwd:this.sessionUser.Tpwd})
- }
+
 }
 </script>
 

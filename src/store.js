@@ -35,6 +35,10 @@ export default new Vuex.Store({
     },
     addEvent(state,obj){
       state.teacherCollections.mydayliredords.push(obj)
+      state.teacherCollections.mydayliredords=[...state.teacherCollections.mydayliredords]
+    },
+    deleteEvent(state,title){
+      state.teacherCollections.mydayliredords=state.teacherCollections.mydayliredords.filter(e=>e.title != title)
     },
     autoAddCheck(state,item){
       if(state.checkNameArr.indexOf(item)===-1)
@@ -43,14 +47,11 @@ export default new Vuex.Store({
   },
   actions: {
 
-    getTCollections({commit},obj){
-      console.log(obj);
-      var self = this
-      axios.get(`http://localhost:3008/teacherCollections?Tname=${obj.userName}&Tpwd=${obj.pwd}`).then(res=>{
+    getTCollections({commit}){
+      axios.get(`http://localhost:3008/teacherCollections?Tpwd=${sessionStorage.getItem('Tpwd')}&TCardId=${sessionStorage.getItem('Tcard')}`).then(res=>{
         console.log(res.data)
         sessionStorage.setItem('userInfo',JSON.stringify(res.data[0]))
         commit('getTCollections',res.data[0])
-        console.log(self)
       })
       
     },
@@ -80,6 +81,14 @@ export default new Vuex.Store({
       axios.patch(`http://localhost:3008/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{mydayliredords:dayliredords}).then(res=>{
         commit('addEvent',obj)
       })
+    },
+    deleteEvent({commit,state},title){
+      let newObj = state.all.find(e=>e.Tname===JSON.parse(sessionStorage.getItem('userInfo')).Tname)
+      let dayliredords=[...newObj.mydayliredords].filter(e=>e.title!=title)
+      axios.patch(`http://localhost:3008/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{mydayliredords:dayliredords}).then(res=>{
+        commit('deleteEvent',title)
+      })
+      
     },
     removeCheckName({commit},item){
       commit('removeCheckName',item)

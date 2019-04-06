@@ -95,7 +95,8 @@ export default {
           pPrice:'',
           payType:'',
           pMore:'',
-          checkMen:[]
+          checkMen:[],
+          checkStatus:0
       }
   }),
   computed:{

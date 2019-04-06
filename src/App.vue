@@ -1,28 +1,42 @@
 <template>
   <div id="app">
-    <router-view />
-     <Footer v-if="isLogin"/>
+  
+      <router-view/>
+      <Footer v-if="islog"/>
   </div>
 </template>
 <script>
+import Login from './views/Login'
 import Footer from './views/Footer'
 export default {
   components:{
+    Login,
     Footer
   },
-  computed:{
-    isLogin(){
-      return JSON.parse(sessionStorage.getItem('userInfo'))?true:false
-    },
-    sessionUser(){
-    return JSON.parse(sessionStorage.getItem('userInfo'))
-  }
+  provide(){
+    return {
+      reload: this.reload
+    }
   },
-  mounted(){
-    console.log(this.isLogin);
+  data:()=>({
+    islog:false
+  }),
+  methods:{
+    reload(){
+      this.$nextTick(function(){
+       this.islog = sessionStorage.getItem('Tcard')?true:false
+      })
+    }
+  },
+  // mounted(){
+  //   console.log(this.isLogin);
     
-  },
+  // },
   created(){
+    // console.log(this.isLogin);
+    
+    // console.log(sessionStorage.getItem('Tcard'));
+    this.islog = sessionStorage.getItem('Tcard')?true:false
     this.$store.dispatch('getAll')
   }
   

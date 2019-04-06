@@ -16,6 +16,9 @@ import Attendence from './views/Attendence'
 import Department from './views/DepartMent'
 import Orgnization from './views/Orgnization'
 import IDCard from './views/IDCard'
+import CheckDetail from './views/CheckDetail'
+import MyCheck from './views/MyCheck'
+import CacheBuf from './views/CacheBuf'
 Vue.use(Router);
 
 const router=new Router({
@@ -101,6 +104,15 @@ const router=new Router({
       path:'/contact/orgnization/:id',
       name:'id',
       component:IDCard
+    },
+    {
+      path:'/oa/check/mycreatecheck',
+      name:'mycheck',
+      component:CheckDetail
+    },{
+      path:'/buf',
+      name:'buf',
+      component:CacheBuf
     }
   ]
 });
