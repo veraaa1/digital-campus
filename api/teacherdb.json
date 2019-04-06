@@ -43,7 +43,25 @@
       "Tpwd": "12345",
       "enterTime": "2014/09/20",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": [
+        {
+          "startDate": "2019-04-06T13:04:19.844Z",
+          "reason": "粉笔采购事项",
+          "pType": "tools",
+          "deadDate": "2019年4月6日",
+          "pName": "白色粉笔",
+          "pSize": "15cm",
+          "pNum": 100,
+          "pPart": "盒",
+          "pPrice": "2.5",
+          "payType": "alipay",
+          "pMore": "送到经管楼512室",
+          "checkMen": [
+            "郑赵小"
+          ],
+          "checkStatus": 0
+        }
+      ],
       "myattendencerecords": [],
       "mydayliredords": [
         {
