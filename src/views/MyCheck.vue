@@ -7,8 +7,8 @@
             <mt-button icon="more" slot="right"></mt-button>
         </mt-header>
         <div class="my-check">
-            <ul>
-                <li v-for="item in checkList" :key="item.reason">
+            <ul v-if="checkPurchaseList.length">
+                <li v-for="item in checkPurchaseList" :key="item.reason">
                      <div>
                     <p>{{item.checkName}}的审批单：</p>
                     <p>{{item.reason}}</p>
@@ -20,8 +20,31 @@
                     <p>{{item.pSize}}</p>
                     <p>{{item.pType}}</p>
                     <p>{{item.payType}}</p>
-                    <p>{{item.checkStatus?'已审批':'待审批'}}</p>
-                    <router-link :to="`/oa/check/checkdetail/needcheck/${item.reason}`" :item="item" v-if="item.checkStatus!=1">立即审批</router-link>
+                    <p>{{item.checkStatus===-1?'未通过':item.checkStatus===1?'已审批':'待审批'}}</p>
+                    <router-link :to="`/oa/check/checkdetail/needcheck/reason*${item.reason}`" :item="item" v-if="item.checkStatus==0">立即审批</router-link>
+                </div>
+                </li>
+            </ul>
+            <ul v-if="checkKpiList.length">
+                <li v-for="item in checkKpiList" :key="item.id">
+                     <div>
+                    <p>{{item.checkName}}的审批单：</p>
+                    <p>上月绩效：{{item.finishRate}}</p>
+                    <p>本月教学计划：{{item.curMonthTeachPlan}}</p>
+                    <p>{{item.checkStatus===-1?'未通过':item.checkStatus===1?'已审批':'待审批'}}</p>
+                    <router-link :to="`/oa/check/checkdetail/needcheck/id*${item.id}`" :item="item" v-if="item.checkStatus==0">立即审批</router-link>
+                </div>
+                </li>
+            </ul>
+            <ul v-if="checkGenaralList.length">
+                <li v-for="item in checkGenaralList" :key="item.id">
+                     <div>
+                    <p>{{item.checkName}}的审批单：</p>
+                    <p>{{item.content}}</p>
+                    <p>{{item.detail}}</p>
+                    <p>{{item.file}}</p>
+                    <p>{{item.checkStatus===-1?'未通过':item.checkStatus===1?'已审批':'待审批'}}</p>
+                    <router-link :to="`/oa/check/checkdetail/needcheck/pact*${item.id}`" :item="item" v-if="item.checkStatus==0">立即审批</router-link>
                 </div>
                 </li>
             </ul>
@@ -33,7 +56,10 @@
 export default {
     name:'myCheck',
     data:()=>({
-        checkList:[]
+        checkPurchaseList:[],
+        checkKpiList:[],
+        checkGenaralList:[],
+        checkObjectList:[]
     }),
     
     computed:{
@@ -49,11 +75,35 @@ export default {
             console.log(this.all,this.user.Tname);
             var self =this
             this.all.forEach(function(curVal,index){
-                curVal.myapprove.forEach(function(e,ind){
+                curVal.myapprove.purchase.forEach(function(e,ind){
                     if(e.checkMen.indexOf(self.user.Tname) != -1){
                         e.checkName=curVal.Tname
                          e.Tcard = curVal.TCardId
-                        self.checkList.push(e)
+                        self.checkPurchaseList.push(e)
+                    }
+                })
+                curVal.myapprove.kpi.forEach(function(e,ind){
+                    if(e.checkMen.indexOf(self.user.Tname) != -1){
+                        console.log(e);
+                         e.checkName=curVal.Tname
+                         e.Tcard = curVal.TCardId
+                        self.checkKpiList.push(e)
+                    }
+                })
+                curVal.myapprove.genaral.forEach(function(e,ind){
+                    if(e.checkMen.indexOf(self.user.Tname) != -1){
+                        console.log(e);
+                         e.checkName=curVal.Tname
+                         e.Tcard = curVal.TCardId
+                        self.checkGenaralList.push(e)
+                    }
+                })
+                curVal.myapprove.object.forEach(function(e,ind){
+                    if(e.checkMen.indexOf(self.user.Tname) != -1){
+                        console.log(e);
+                         e.checkName=curVal.Tname
+                         e.Tcard = curVal.TCardId
+                        self.checkObjectList.push(e)
                     }
                 })
                 })
@@ -63,20 +113,43 @@ export default {
         var self =this
         this.$nextTick(function(){
            
+           
             self.all.forEach(function(curVal,index){
-                    curVal.myapprove.forEach(function(e,ind){
+                    curVal.myapprove.purchase.forEach(function(e,ind){
                     if(e.checkMen.indexOf(self.user.Tname) != -1){
                         console.log(e);
-                        
                          e.checkName=curVal.Tname
                          e.Tcard = curVal.TCardId
-                        self.checkList.push(e)
+                        self.checkPurchaseList.push(e)
                     }
                 })
-                
-                
+                curVal.myapprove.kpi.forEach(function(e,ind){
+                    if(e.checkMen.indexOf(self.user.Tname) != -1){
+                        console.log(e);
+                         e.checkName=curVal.Tname
+                         e.Tcard = curVal.TCardId
+                        self.checkKpiList.push(e)
+                    }
+                })
+                curVal.myapprove.genaral.forEach(function(e,ind){
+                    if(e.checkMen.indexOf(self.user.Tname) != -1){
+                        console.log(e);
+                         e.checkName=curVal.Tname
+                         e.Tcard = curVal.TCardId
+                        self.checkGenaralList.push(e)
+                    }
+                })
+                curVal.myapprove.object.forEach(function(e,ind){
+                    if(e.checkMen.indexOf(self.user.Tname) != -1){
+                        console.log(e);
+                         e.checkName=curVal.Tname
+                         e.Tcard = curVal.TCardId
+                        self.checkObjectList.push(e)
+                    }
+                })
                 })
       })
+      console.log(self.checkPurchaseList,self.checkKpiListst);
     }
 }
 </script>

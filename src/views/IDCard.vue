@@ -20,7 +20,7 @@ methods:{
         
         this.$store.dispatch('checkNameArr',this.singlePerson.Tname)
         this.$router.push({
-            path:'/purchase'
+            path:`/${this.$store.state.typeCheck}`
         })
     }
 },

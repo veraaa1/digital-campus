@@ -19,7 +19,12 @@
       "Tpwd": "12345",
       "enterTime": "2010/03/11",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -43,45 +48,12 @@
       "Tpwd": "12345",
       "enterTime": "2014/09/20",
       "leaveTime": "--",
-      "myapprove": [
-        {
-          "startDate": "2019-04-06T13:04:19.844Z",
-          "reason": "粉笔采购事项",
-          "pType": "tools",
-          "deadDate": "2019年4月6日",
-          "pName": "白色粉笔",
-          "pSize": "15cm",
-          "pNum": 100,
-          "pPart": "盒",
-          "pPrice": "2.5",
-          "payType": "alipay",
-          "pMore": "送到经管楼512室",
-          "checkMen": [
-            "郑赵小"
-          ],
-          "checkStatus": 0
-        },
-        {
-          "startDate": "2019-04-06T15:19:23.303Z",
-          "reason": "惠普电脑采购",
-          "pType": "hardware",
-          "deadDate": "2019年7月12日",
-          "pName": "惠普笔记本",
-          "pSize": "R221",
-          "pNum": 50,
-          "pPart": "台",
-          "pPrice": "5999",
-          "payType": "bank",
-          "pMore": "货到付款，用于办公室办公。",
-          "checkMen": [
-            "小贺贺"
-          ],
-          "checkStatus": 1,
-          "checkName": "吴王吴",
-          "Tcard": "251595882288210379",
-          "id": "649186662"
-        }
-      ],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [
         {
@@ -112,7 +84,12 @@
       "Tpwd": "12345",
       "enterTime": "2013/07/27",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -136,7 +113,12 @@
       "Tpwd": "12345",
       "enterTime": "2009/08/10",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -160,7 +142,12 @@
       "Tpwd": "12345",
       "enterTime": "2013/07/31",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -184,7 +171,12 @@
       "Tpwd": "12345",
       "enterTime": "2015/04/28",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -208,7 +200,12 @@
       "Tpwd": "12345",
       "enterTime": "2009/11/11",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -232,7 +229,12 @@
       "Tpwd": "12345",
       "enterTime": "2009/11/11",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -256,7 +258,12 @@
       "Tpwd": "12345",
       "enterTime": "2005/05/05",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -280,7 +287,12 @@
       "Tpwd": "12345",
       "enterTime": "2005/05/05",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -304,7 +316,12 @@
       "Tpwd": "12345",
       "enterTime": "2009/11/11",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -328,7 +345,12 @@
       "Tpwd": "12345",
       "enterTime": "2008/06/10",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -352,89 +374,47 @@
       "Tsex": "女",
       "enterTime": "2009/8/20",
       "leaveTime": "--",
-      "myapprove": [
-        {
-          "startDate": "2019-01-01T00:00:00.000Z",
-          "reason": "Bu",
-          "pType": "books",
-          "deadDate": "2020年3月1日",
-          "pName": "111",
-          "pSize": "11",
-          "pNum": 4,
-          "pPart": "11",
-          "pPrice": "11",
-          "payType": "wepay",
-          "pMore": "11",
-          "checkMen": [
-            "王风周"
-          ],
-          "checkStatus": 1,
-          "checkName": "小贺贺",
-          "Tcard": "123456789012345678",
-          "id": "12334454"
-        },
-        {
-          "startDate": "2019-04-05T04:57:51.816Z",
-          "reason": "全区",
-          "pType": "tools",
-          "deadDate": "2019年4月8日",
-          "pName": "11",
-          "pSize": "11",
-          "pNum": 4,
-          "pPart": "111",
-          "pPrice": "11",
-          "payType": "alipay",
-          "pMore": "1111",
-          "checkMen": [
-            "吴王吴"
-          ],
-          "checkStatus": 1,
-          "checkName": "小贺贺",
-          "Tcard": "123456789012345678",
-          "id": "12334454"
-        },
-        {
-          "startDate": "2019-04-05T09:24:52.485Z",
-          "reason": "11111",
-          "pType": "books",
-          "deadDate": "2019年6月5日",
-          "pName": "111",
-          "pSize": "11",
-          "pNum": 15,
-          "pPart": "111",
-          "pPrice": "111",
-          "payType": "wepay",
-          "pMore": "11",
-          "checkMen": [
-            "王风周"
-          ],
-          "checkStatus": 1,
-          "checkName": "小贺贺",
-          "Tcard": "123456789012345678",
-          "id": "12334454"
-        },
-        {
-          "startDate": "2019-04-05T09:30:12.104Z",
-          "reason": "222",
-          "pType": "tools",
-          "deadDate": "2019年7月5日",
-          "pName": "22",
-          "pSize": "22",
-          "pNum": 6,
-          "pPart": "111",
-          "pPrice": "111",
-          "payType": "money",
-          "pMore": "111",
-          "checkMen": [
-            "王风周",
-            "吴王吴"
-          ],
-          "checkStatus": 1,
-          "checkName": "小贺贺",
-          "Tcard": "123456789012345678",
-          "id": "12334454"
-        }
-      ],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [
+          {
+            "id": 1554616681476,
+            "lastMonthTeachMission": "11111",
+            "lastMonthActualMission": "11",
+            "finishRate": "11",
+            "lastMonthSelfEvaluation": "233",
+            "curMonthTeachMission": "1324",
+            "curMonthTeachPlan": "124333",
+            "checkMen": [
+              "小贺贺"
+            ],
+            "checkStatus": -1
+          }
+        ],
+        "genaral": [
+          {
+            "id": 1554625027384,
+            "content": "3444455",
+            "detail": "1323434",
+            "file": "",
+            "checkMen": [
+              "雪吴郑"
+            ],
+            "checkStatus": -1
+          },
+          {
+            "id": 1554625706933,
+            "content": "拉阿里",
+            "detail": "哦哟减肥的",
+            "file": "C:\\fakepath\\曹贺.任务书.doc",
+            "checkMen": [
+              "小钟钟"
+            ],
+            "checkStatus": -1
+          }
+        ],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [
         {
@@ -447,12 +427,6 @@
           "title": "111",
           "start": "2019-04-06T04:30:00",
           "end": "2019-04-06T05:00:00",
-          "allDay": false
-        },
-        {
-          "title": "1122",
-          "start": "2019-04-06T00:30:00",
-          "end": "2019-04-06T01:30:00",
           "allDay": false
         }
       ],
@@ -477,7 +451,26 @@
       "Tsex": "男",
       "enterTime": "2009/8/20",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [
+          {
+            "id": 1554625846972,
+            "lastMonthTeachMission": "lal ",
+            "lastMonthActualMission": "ssf",
+            "finishRate": "ee",
+            "lastMonthSelfEvaluation": "ewrfdfg",
+            "curMonthTeachMission": "fsgdfgfg",
+            "curMonthTeachPlan": "dsfdgfdgfd",
+            "checkMen": [
+              "小贺贺"
+            ],
+            "checkStatus": 1
+          }
+        ],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -501,7 +494,12 @@
       "Tpwd": "12345",
       "enterTime": "2001/11/08",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -525,7 +523,12 @@
       "Tpwd": "12345",
       "enterTime": "2016/12/29",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -549,7 +552,12 @@
       "Tpwd": "12345",
       "enterTime": "2016/12/29",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -573,7 +581,12 @@
       "Tpwd": "12345",
       "enterTime": "2009/07/06",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -597,7 +610,12 @@
       "Tpwd": "12345",
       "enterTime": "2015/12/13",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -621,7 +639,12 @@
       "Tpwd": "12345",
       "enterTime": "2009/07/05",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -645,7 +668,12 @@
       "Tpwd": "12345",
       "enterTime": "2009/07/05",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -669,7 +697,12 @@
       "Tpwd": "12345",
       "enterTime": "2009/07/05",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -693,7 +726,12 @@
       "Tpwd": "12345",
       "enterTime": "2016/03/04",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -717,7 +755,12 @@
       "Tpwd": "12345",
       "enterTime": "2016/03/04",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -741,7 +784,12 @@
       "Tpwd": "12345",
       "enterTime": "1999/09/15",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -765,7 +813,12 @@
       "Tpwd": "12345",
       "enterTime": "2007/08/31",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -789,7 +842,12 @@
       "Tpwd": "12345",
       "enterTime": "2007/08/31",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -813,7 +871,12 @@
       "Tpwd": "12345",
       "enterTime": "1999/09/15",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -837,7 +900,12 @@
       "Tpwd": "12345",
       "enterTime": "2018/01/22",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -861,7 +929,12 @@
       "Tpwd": "12345",
       "enterTime": "2001/05/04",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -885,7 +958,12 @@
       "Tpwd": "12345",
       "enterTime": "2001/05/04",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -909,7 +987,12 @@
       "Tpwd": "12345",
       "enterTime": "2000/03/12",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -933,7 +1016,12 @@
       "Tpwd": "12345",
       "enterTime": "2004/11/06",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -957,7 +1045,12 @@
       "Tpwd": "12345",
       "enterTime": "2001/02/19",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -981,7 +1074,12 @@
       "Tpwd": "12345",
       "enterTime": "2001/02/19",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1005,7 +1103,12 @@
       "Tpwd": "12345",
       "enterTime": "2007/12/28",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1029,7 +1132,12 @@
       "Tpwd": "12345",
       "enterTime": "2001/01/06",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1053,7 +1161,12 @@
       "Tpwd": "12345",
       "enterTime": "2007/02/10",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1077,7 +1190,12 @@
       "Tpwd": "12345",
       "enterTime": "2008/02/21",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1101,7 +1219,12 @@
       "Tpwd": "12345",
       "enterTime": "2008/02/21",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1125,7 +1248,12 @@
       "Tpwd": "12345",
       "enterTime": "2001/12/18",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1149,7 +1277,12 @@
       "Tpwd": "12345",
       "enterTime": "2000/12/22",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1173,7 +1306,12 @@
       "Tpwd": "12345",
       "enterTime": "2000/12/22",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1197,7 +1335,12 @@
       "Tpwd": "12345",
       "enterTime": "2012/01/04",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1221,7 +1364,12 @@
       "Tpwd": "12345",
       "enterTime": "2011/02/15",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1245,7 +1393,12 @@
       "Tpwd": "12345",
       "enterTime": "2010/12/31",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1269,7 +1422,12 @@
       "Tpwd": "12345",
       "enterTime": "2007/04/12",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1293,7 +1451,12 @@
       "Tpwd": "12345",
       "enterTime": "2007/08/20",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1317,7 +1480,12 @@
       "Tpwd": "12345",
       "enterTime": "2001/08/07",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1341,7 +1509,12 @@
       "Tpwd": "12345",
       "enterTime": "1999/08/25",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1365,7 +1538,12 @@
       "Tpwd": "12345",
       "enterTime": "2016/05/30",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1389,7 +1567,12 @@
       "Tpwd": "12345",
       "enterTime": "2016/05/30",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1413,7 +1596,12 @@
       "Tpwd": "12345",
       "enterTime": "2001/09/22",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1437,7 +1625,12 @@
       "Tpwd": "12345",
       "enterTime": "2009/09/05",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1461,7 +1654,12 @@
       "Tpwd": "12345",
       "enterTime": "2009/09/05",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1485,7 +1683,12 @@
       "Tpwd": "12345",
       "enterTime": "2000/01/11",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1509,7 +1712,12 @@
       "Tpwd": "12345",
       "enterTime": "2017/05/14",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1533,7 +1741,12 @@
       "Tpwd": "12345",
       "enterTime": "2010/04/22",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1557,7 +1770,12 @@
       "Tpwd": "12345",
       "enterTime": "2017/10/22",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1581,7 +1799,12 @@
       "Tpwd": "12345",
       "enterTime": "2007/01/06",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1605,7 +1828,12 @@
       "Tpwd": "12345",
       "enterTime": "2007/01/06",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1629,7 +1857,12 @@
       "Tpwd": "12345",
       "enterTime": "2007/01/06",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1653,7 +1886,12 @@
       "Tpwd": "12345",
       "enterTime": "2011/03/10",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1677,7 +1915,12 @@
       "Tpwd": "12345",
       "enterTime": "2018/03/30",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1701,7 +1944,12 @@
       "Tpwd": "12345",
       "enterTime": "2018/03/30",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1725,7 +1973,12 @@
       "Tpwd": "12345",
       "enterTime": "2008/01/24",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1749,7 +2002,12 @@
       "Tpwd": "12345",
       "enterTime": "2015/01/30",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1773,7 +2031,12 @@
       "Tpwd": "12345",
       "enterTime": "2017/06/17",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1797,7 +2060,12 @@
       "Tpwd": "12345",
       "enterTime": "2017/02/10",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1821,7 +2089,12 @@
       "Tpwd": "12345",
       "enterTime": "2012/09/06",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1845,7 +2118,12 @@
       "Tpwd": "12345",
       "enterTime": "1999/04/30",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1869,7 +2147,12 @@
       "Tpwd": "12345",
       "enterTime": "2010/06/29",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1893,7 +2176,12 @@
       "Tpwd": "12345",
       "enterTime": "2012/12/18",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1917,7 +2205,12 @@
       "Tpwd": "12345",
       "enterTime": "2015/04/07",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1941,7 +2234,12 @@
       "Tpwd": "12345",
       "enterTime": "2006/10/13",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1965,7 +2263,12 @@
       "Tpwd": "12345",
       "enterTime": "2006/10/13",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -1989,7 +2292,12 @@
       "Tpwd": "12345",
       "enterTime": "2015/04/01",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2013,7 +2321,12 @@
       "Tpwd": "12345",
       "enterTime": "2015/04/01",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2037,7 +2350,12 @@
       "Tpwd": "12345",
       "enterTime": "2008/12/19",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2061,7 +2379,12 @@
       "Tpwd": "12345",
       "enterTime": "2010/04/30",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2085,7 +2408,12 @@
       "Tpwd": "12345",
       "enterTime": "2008/08/30",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2109,7 +2437,12 @@
       "Tpwd": "12345",
       "enterTime": "2005/07/26",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2133,7 +2466,12 @@
       "Tpwd": "12345",
       "enterTime": "2012/12/17",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2157,7 +2495,12 @@
       "Tpwd": "12345",
       "enterTime": "2014/07/16",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2181,7 +2524,44 @@
       "Tpwd": "12345",
       "enterTime": "2008/11/11",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [
+          {
+            "startDate": "2019-04-07T07:14:33.930Z",
+            "reason": "222",
+            "pType": "tools",
+            "deadDate": "2019年4月9日",
+            "pName": "222",
+            "pSize": "111",
+            "pNum": 4,
+            "pPart": "333",
+            "pPrice": "44",
+            "payType": "alipay",
+            "pMore": "3434543答复部分干部 ",
+            "checkMen": [
+              "吴王风"
+            ],
+            "checkStatus": 1
+          }
+        ],
+        "kpi": [
+          {
+            "id": 1554621542315,
+            "lastMonthTeachMission": "1213312",
+            "lastMonthActualMission": "21",
+            "finishRate": "45%3",
+            "lastMonthSelfEvaluation": "4人生奋斗过",
+            "curMonthTeachMission": "辅导费功夫",
+            "curMonthTeachPlan": "风少的地方",
+            "checkMen": [
+              "王雪可"
+            ],
+            "checkStatus": 1
+          }
+        ],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2205,7 +2585,12 @@
       "Tpwd": "12345",
       "enterTime": "2006/01/23",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2229,7 +2614,12 @@
       "Tpwd": "12345",
       "enterTime": "2007/03/25",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2253,7 +2643,12 @@
       "Tpwd": "12345",
       "enterTime": "2016/04/07",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2277,7 +2672,12 @@
       "Tpwd": "12345",
       "enterTime": "2016/04/07",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2301,7 +2701,12 @@
       "Tpwd": "12345",
       "enterTime": "2010/12/24",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2325,7 +2730,12 @@
       "Tpwd": "12345",
       "enterTime": "2006/09/23",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2349,7 +2759,12 @@
       "Tpwd": "12345",
       "enterTime": "2003/11/25",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2373,7 +2788,12 @@
       "Tpwd": "12345",
       "enterTime": "2001/02/04",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2397,7 +2817,12 @@
       "Tpwd": "12345",
       "enterTime": "2007/08/01",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2421,7 +2846,26 @@
       "Tpwd": "12345",
       "enterTime": "2006/11/16",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [
+          {
+            "id": 1554618223980,
+            "lastMonthTeachMission": "编辑永利",
+            "lastMonthActualMission": "为框架的首付款",
+            "finishRate": "11%",
+            "lastMonthSelfEvaluation": "2炖豆腐",
+            "curMonthTeachMission": "说到底发生",
+            "curMonthTeachPlan": "地方",
+            "checkMen": [
+              "可风钱"
+            ],
+            "checkStatus": 1
+          }
+        ],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2445,7 +2889,12 @@
       "Tpwd": "12345",
       "enterTime": "2016/04/04",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2469,7 +2918,12 @@
       "Tpwd": "12345",
       "enterTime": "2007/08/01",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2493,7 +2947,12 @@
       "Tpwd": "12345",
       "enterTime": "2010/01/27",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2517,7 +2976,12 @@
       "Tpwd": "12345",
       "enterTime": "2010/01/27",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2541,7 +3005,12 @@
       "Tpwd": "12345",
       "enterTime": "2016/04/04",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2565,7 +3034,12 @@
       "Tpwd": "12345",
       "enterTime": "2016/04/04",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2589,7 +3063,12 @@
       "Tpwd": "12345",
       "enterTime": "1999/04/08",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2613,7 +3092,12 @@
       "Tpwd": "12345",
       "enterTime": "2008/01/08",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2637,7 +3121,12 @@
       "Tpwd": "12345",
       "enterTime": "2003/09/11",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2661,7 +3150,12 @@
       "Tpwd": "12345",
       "enterTime": "2002/01/08",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2685,7 +3179,12 @@
       "Tpwd": "12345",
       "enterTime": "2002/01/08",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2709,7 +3208,12 @@
       "Tpwd": "12345",
       "enterTime": "2016/05/07",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2733,7 +3237,12 @@
       "Tpwd": "12345",
       "enterTime": "2003/03/08",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2757,7 +3266,12 @@
       "Tpwd": "12345",
       "enterTime": "2001/08/30",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2781,7 +3295,12 @@
       "Tpwd": "12345",
       "enterTime": "2012/01/21",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2805,7 +3324,12 @@
       "Tpwd": "12345",
       "enterTime": "2012/01/21",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []
@@ -2829,7 +3353,12 @@
       "Tpwd": "12345",
       "enterTime": "2003/01/11",
       "leaveTime": "--",
-      "myapprove": [],
+      "myapprove": {
+        "purchase": [],
+        "kpi": [],
+        "genaral": [],
+        "object": []
+      },
       "myattendencerecords": [],
       "mydayliredords": [],
       "myrest": []

@@ -141,8 +141,13 @@ export default {
   },
   mounted(){
       this.$store.dispatch('getAll')
-      if(!this.$store.state.checkNameArr.length)
-      this.$store.dispatch('autoAddCheck','采购主管')
+      this.$store.dispatch('clearCheckMenList')
+      if(!this.$store.state.checkNameArr.length){
+          let career = '采购主管'
+          let department = '采购部门'
+          this.$store.dispatch('autoAddCheck',{career,department})
+      }
+      
   }
 }
 </script>

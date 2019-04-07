@@ -8,7 +8,10 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import FullCalendar from 'vue-full-calendar'
 import 'fullcalendar/dist/fullcalendar.css'
+import Chat from 'vue-beautiful-chat'
+
 Vue.config.productionTip = false;
+Vue.use(Chat)
 Vue.use(FullCalendar)
 Vue.use(ElementUI);
 new Vue({

@@ -2,18 +2,27 @@
   <div class="check">
     <h1>审批</h1>
     <router-link to="/oa/check/mycreatecheck">我发起的</router-link>
-    <router-link to="/oa/check/mycheck">我审批的</router-link>
+    <router-link to="/oa/check/mycheck">我审批的
+    <!-- <mt-badge size="small">30</mt-badge> -->
+    </router-link>
     <div>
-        <router-link to="/purchase">采购审批</router-link>
-        <router-link to="/kpi">绩效自评</router-link>
-        <router-link to="/pact">通用审批</router-link>
-        <router-link to="/project">立项申请</router-link>
+        <a href="javascript:;" @click="handleChangeType('purchase')">采购审批</a>
+        <a href="javascript:;" @click="handleChangeType('kpi')">绩效自评</a>
+        <a href="javascript:;" @click="handleChangeType('pact')">通用审批</a>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name:"check"
+  name:"check",
+  methods:{
+    handleChangeType(type){
+      this.$store.dispatch('changeType',type)
+      this.$router.push({
+        path:`/${type}`
+      })
+    } 
+  }
 }
 </script>
 <style lang="scss" scoped>

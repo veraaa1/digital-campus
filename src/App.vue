@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-  
       <router-view/>
       <Footer v-if="islog"/>
   </div>
