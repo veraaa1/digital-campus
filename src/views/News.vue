@@ -28,10 +28,13 @@
         <img src="../assets/gonggao.png" alt="">
         <vue-seamless-scroll :data="listData" :class-option="optionSingleHeight" class="seamless-warp">
         
-        <ul class="item">
+        <ul class="item" v-if="listData.length">
             <li v-for="item in listData" @click="getData(item)" :key="item.title">
                 <span>您的日程：</span><span class="title" v-text="item.title"></span><span class="date" v-text="item.date"></span>
             </li>
+        </ul>
+        <ul v-else>
+          <li><span style="padding-left:40px">无日程</span></li>
         </ul>
     </vue-seamless-scroll>
       </div>

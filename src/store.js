@@ -72,6 +72,10 @@ export default new Vuex.Store({
     confirmPact(state,obj){
       state.teacherCollections.myapprove.genaral.push(obj)
     },
+    // 请假审批添加
+    confirmRest(state,obj){
+      state.teacherCollections.myrest.push(obj)
+    },
     // 审批类型
     changeType(state,type){
       state.typeCheck = type
@@ -223,6 +227,19 @@ export default new Vuex.Store({
       
       axios.patch(`http://localhost:3008/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{myapprove:approve}).then(res=>{
         commit('confirmPact',obj)
+      })
+    },
+    // 请假审批添加
+    confirmRest({commit,state},obj){
+      let newObj = state.all.find(e=>e.Tname===JSON.parse(sessionStorage.getItem('userInfo')).Tname)
+      newObj.myrest.push(obj)
+      let rest = [...newObj.myrest]
+      console.log(rest,obj);
+      
+      axios.patch(`http://localhost:3008/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{myrest:rest}).then(res=>{
+        console.log(res.data);
+        
+        commit('confirmRest',obj)
       })
     },
     // 审批类型

@@ -936,8 +936,40 @@
         "object": []
       },
       "myattendencerecords": [],
-      "mydayliredords": [],
-      "myrest": []
+      "mydayliredords": [
+        {
+          "title": "陪孩子看病",
+          "start": "2019-04-10T00:00:00",
+          "end": "2019-04-10T01:00:00",
+          "allDay": false
+        }
+      ],
+      "myrest": [
+        {
+          "startTime": "2019年4月8日",
+          "endTime": "2019年4月9日",
+          "restDays": "1",
+          "restReason": "看病",
+          "checkMen": [
+            "周雪赵",
+            "小王元",
+            "吴吴周"
+          ],
+          "checkStatus": 0
+        },
+        {
+          "startTime": "2019年4月9日",
+          "endTime": "2019年4月9日",
+          "restDays": "1",
+          "restReason": "休息",
+          "checkMen": [
+            "周雪赵",
+            "小王元",
+            "王风孙"
+          ],
+          "checkStatus": 0
+        }
+      ]
     },
     {
       "TCardId": "987897196641930414",

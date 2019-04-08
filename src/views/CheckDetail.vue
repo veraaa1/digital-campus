@@ -58,6 +58,25 @@
                     <p>{{item.checkStatus===-1?'未通过':item.checkStatus===1?'已审批':'待审批'}}</p>
             </li>
         </ul>
+         <ul v-if="lists.myrest.length">
+            <li v-for="item in user.myrest" :key="item.id">
+                <p>请假审批单</p>
+                <p>
+                    {{item.startTime}}
+                </p>
+                <p>
+                    {{item.endTime}}
+                </p>
+                <p>{{
+                    item.restReason}}</p>
+                    <p>{{item.restDays}}天</p>
+                <div>
+                        <span>审批人：</span>
+                        <p v-for="items in item.checkMen" :key="items">{{item.checkMen.indexOf(items)+1}}级审批人：{{items}}</p>
+                    </div>
+                    <p>{{item.checkStatus===-1?'未通过':item.checkStatus===1?'已审批':'待审批'}}</p>
+            </li>
+        </ul>
         </div>
         
     </div>

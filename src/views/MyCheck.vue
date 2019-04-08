@@ -48,6 +48,21 @@
                 </div>
                 </li>
             </ul>
+            <ul v-if="checkRestList.length">
+                <li v-for="item in checkRestList" :key="item.id">
+                     <div>
+                    <p>{{item.checkName}}的审批单：</p>
+                    <p>{{item.startTime}}</p>
+                    <p>{{item.endTime}}</p>
+                    <p>{{item.restDays}}天</p>
+                    <p>{{item.restReason}}</p>
+                    <p>当前审批人:{{item.checkMen[0]}}</p>
+                    <p>{{item.checkStatus===-1?'未通过':item.checkStatus===1?'已审批':'待审批'}}</p>
+                    <!-- 如果当前级审批人等于本人则可以立即审批 -->
+                    <router-link :to="`/oa/check/checkdetail/needcheck/pact*${item.id}`" :item="item" v-if="item.checkStatus==0">立即审批</router-link>
+                </div>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
@@ -59,7 +74,8 @@ export default {
         checkPurchaseList:[],
         checkKpiList:[],
         checkGenaralList:[],
-        checkObjectList:[]
+        checkObjectList:[],
+        checkRestList:[]
     }),
     
     computed:{
@@ -106,6 +122,14 @@ export default {
                         self.checkObjectList.push(e)
                     }
                 })
+                curVal.myrest.forEach(function(e,ind){
+                    if(e.checkMen.indexOf(self.user.Tname) === 0){
+                        console.log(e);
+                         e.checkName=curVal.Tname
+                         e.Tcard = curVal.TCardId
+                        self.checkRestList.push(e)
+                    }
+                })
                 })
         }
     },
@@ -145,6 +169,14 @@ export default {
                          e.checkName=curVal.Tname
                          e.Tcard = curVal.TCardId
                         self.checkObjectList.push(e)
+                    }
+                })
+                curVal.myrest.forEach(function(e,ind){
+                    if(e.checkMen.indexOf(self.user.Tname) === 0){
+                        console.log(e);
+                         e.checkName=curVal.Tname
+                         e.Tcard = curVal.TCardId
+                        self.checkRestList.push(e)
                     }
                 })
                 })
