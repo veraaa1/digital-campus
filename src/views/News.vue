@@ -1,5 +1,11 @@
 <template>
   <div class="news">
+    <div class="title">
+        <p>{{user.Tname}},欢迎您</p>
+        <p>{{today}}</p>
+        <h2>{{week}}</h2>
+    </div>
+    
     <div class="banner">
       <Swiper>
        <Slide>
@@ -12,6 +18,37 @@
             <img src="https://www.ysu.edu.cn/20190311.jpg" alt="">
        </Slide>
       </Swiper>
+      
+      <div class="gonggao">
+        <img src="../assets/gonggao.png" alt="">
+        <vue-seamless-scroll :data="listData" :class-option="optionSingleHeight" class="seamless-warp">
+        
+        <ul class="item">
+            <li v-for="item in listData" @click="getData(item)" :key="item.title">
+                <span class="title" v-text="item.title"></span><span class="date" v-text="item.date"></span>
+            </li>
+        </ul>
+    </vue-seamless-scroll>
+      </div>
+    </div>
+    <p style="border-bottom:3px solid #409EFF;width:90px;text-align:center;margin-left:10px;font-size:20px;padding-bottom:5px;">燕园系统</p>
+    <div class="system">
+
+            <el-button type="primary">个人主页</el-button>
+            <el-button type="success">科研系统</el-button>
+            <el-button type="warning">教务系统</el-button>
+            <el-button type="danger">办公系统</el-button> 
+    </div>
+    <div class="new">
+      <p style="border-bottom:3px solid #409EFF;width:90px;text-align:center;margin-left:10px;font-size:20px;padding-bottom:5px;">校园新闻</p>
+      <ul class="news-list">
+        <li v-for="item in newsList" :key="item.title">
+          <a href="javascript:;">{{item.title}}</a>
+          <p style="text-align:right;font-size:10px;color:#707070;margin-top:20px;">{{item.date}}</p>
+          <img src="../assets/shoucang.png" alt="" v-if="!item.like" @click="item.like = true">
+          <img src="../assets/shoucang (1).png" alt="" v-if="item.like" @click="item.like = false">
+        </li>
+      </ul>
     </div>
     <beautiful-chat
       :participants="participants"
@@ -41,8 +78,47 @@ export default {
   },
 data() {
     return {
+      
+      listData: [{
+                'title': '公告1',
+                'date': '2017-12-16'
+            }, {
+                'title': '公告2',
+                'date': '2017-12-16'
+            }],
+            
+      newsList:[
+        {
+          title:'燕山大学主办中国工程教育专业认证辅导答疑会',
+          date:'2019-04-04',
+          like:false,
+        },
+         {
+          title:'电气工程学院组织志愿者前往黑山窑小学支教',
+          date:'2019-04-05',
+          like:false,
+         },
+          {
+          title:'河北省高校学报研究会常务理事会（扩大）九届四次会议在燕山大学召开',
+          date:'2019-04-06',
+          like:false,
+        },
+         {
+          title:'校团委组织开展“美丽海岸 守护沙滩”创卫志愿服务活动',
+          date:'2019-04-07',
+          like:false,
+        },
+         {
+          title:'燕山大学举办第十五届社团文化展示月开幕式',
+          date:'2019-04-08',
+          like:false,
+        }
+
+      ],
       ws:null,
       departList:[],
+      today:'',
+      week:'',
       participants: [
         // {
         //   id: 'user1',
@@ -92,6 +168,9 @@ data() {
     }
   },
   methods: {
+    getData:function (item) {
+                console.log(item.title);
+            },
     sendMessage (text) {
       var self = this
       
@@ -147,16 +226,32 @@ watch:{
  computed:{
    user(){
      return this.$store.state.all?this.$store.state.all.find(e=>e.TCardId == sessionStorage.getItem('Tcard')):JSON.parse(sessionStorage.getItem('userInfo'))
-   }
+   },
+   optionSingleHeight () {
+            return {
+                //                       //（什么都不设置默认的）
+                 singleHeight: 40,     //（带停顿的）
+                waitTime:2500,         //（停顿时间）
+                direction: 0  ,        //（从上往下的）
+                // direction:2  ,         //（左右的）
+                step:1   ,              //（调整速度的）0
+                hoverStop:false        //(鼠标停留停止 离开继续运行（反之则停止）)
+            }
+        }
  },
  created(){
+   let day = new Date()
+   this.today = `${day.getMonth()+1}月${day.getDate()}日`
+   let m = day.getDay()
+   this.week = m===1?'Mon.':m===2?'Tues.':m===3?'Wed.':m===4?'Thurs':m===5?'Fri.':m===6?'Sat.':'Sun.'
    this.$store.dispatch('getTCollections')
     this.$store.state.all.forEach(e=>{
       if(e.TeachDepartMent == this.user.TeachDepartMent){
         this.participants.push({
           id:e.TCardId,
           name:e.Tname,
-          imageUrl:'https://avatars3.githubusercontent.com/u/37018832?s=200&v=4'
+          imageUrl:'https://avatars3.githubusercontent.com/u/37018832?s=200&v=4',
+          career:e.TeachCareer
         })
     }})
     this.ws = new WebSocket('ws://129.204.120.66:3047');
@@ -180,6 +275,71 @@ watch:{
   .banner img{
     width: 100vw;
   }
+  .seamless-warp {
+        width: 100%;
+        height: 30px;
+        overflow: hidden;
+        line-height:30px;
+        font-size: 12px;
+    }
+    .gonggao{
+      width: 100vw;
+      position: relative;
+      >img{
+        position: absolute;
+        left: 10px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-top: 7px;
+      }
+      .item{
+        padding-left: 50px;
+        list-style: none;
+      }
+    }
+    .system{
+      width: 100vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px;
+      margin: 0 auto;
+    }
+    .system .el-button{
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+      font-size:18px;
+    }
+    .news-list{
+      width: 100vw;
+      list-style: none;
+      padding-top: 10px;
+      >li{
+         box-shadow: 3px 3px 30px #eee;
+         width: 90%;
+         border-radius: 5px;
+         margin: 0 auto;
+         margin-bottom: 10px;
+         padding: 5px;
+         padding-bottom: 30px;
+         position: relative;
+         >a{
+           color: #707070;
+           text-decoration: none;
+         }
+         
+         >img{
+           width: 20px;
+           height: 20px;
+           position: absolute;
+           bottom: 2px;
+           right: 5px;
+         }
+      }
+     
+    }
 }
 
 </style>

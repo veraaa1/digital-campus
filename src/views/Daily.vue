@@ -37,6 +37,8 @@ export default {
        if(action){
          this.$refs.calendar.$emit('removeEvent',event)
          this.handleDeleteEvent(event.title)         
+       }else{
+
        }
        
       });
@@ -75,5 +77,8 @@ export default {
     overflow: hidden;
     overflow-y: auto;
     margin-top: 40px;
+}
+.fc-scroller .fc-day-grid-container{
+  height: auto!important;
 }
 </style>

@@ -2,31 +2,31 @@
 <footer>
   <mt-tabbar v-model="selected">
   <mt-tab-item id="news" class="all-change">
-    <router-link to="/news">
+    <router-link to="/news" @click="changeType('news')">
       <img src="../assets/liaotianjilu.png">
       <span>消息</span>
     </router-link>
   </mt-tab-item>
   <mt-tab-item id="daily" class="all-change">
-    <router-link to="/daily">
+    <router-link to="/daily" @click="changeType('daily')">
       <img src="../assets/richeng.png">
       <span>日程</span>
   </router-link>
   </mt-tab-item>
   <mt-tab-item id="oa" class="all-change">
-    <router-link to="/oa">
+    <router-link to="/oa" @click="changeType('oa')">
       <img src="../assets/gongzuoshi.png">
       <span>OA</span>
     </router-link>
   </mt-tab-item>
   <mt-tab-item id="contact" class="all-change">
-    <router-link to="/contact">
+    <router-link to="/contact" @click="changeType('contact')">
       <img src="../assets/tongxunlu.png">
       <span>通讯</span>
     </router-link>
   </mt-tab-item>
   <mt-tab-item id="me" class="all-change">
-    <router-link to="/me">
+    <router-link to="/me" @click="changeType('me')">
       <img src="../assets/wode.png">
       <span>我的</span>
     </router-link>
@@ -38,6 +38,11 @@
 export default {
 name:"tabbar",
 data:()=>({selected:"news"}),
+methods:{
+  changeType(type){
+    this.selected = type
+  }
+}
 
 }
 </script>
