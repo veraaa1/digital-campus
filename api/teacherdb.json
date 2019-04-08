@@ -418,12 +418,6 @@
       "myattendencerecords": [],
       "mydayliredords": [
         {
-          "title": "哦哦",
-          "start": "2019-04-06T02:30:00",
-          "end": "2019-04-06T03:30:00",
-          "allDay": false
-        },
-        {
           "title": "111",
           "start": "2019-04-06T04:30:00",
           "end": "2019-04-06T05:00:00",

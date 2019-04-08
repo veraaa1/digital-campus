@@ -1,5 +1,18 @@
 <template>
   <div class="news">
+    <div class="banner">
+      <Swiper>
+       <Slide>
+           <img src="https://www.ysu.edu.cn/20190403.jpg" alt="">
+       </Slide>
+       <Slide>
+            <img src="https://www.ysu.edu.cn/20190325.jpg" alt="">
+       </Slide>
+       <Slide>
+            <img src="https://www.ysu.edu.cn/20190311.jpg" alt="">
+       </Slide>
+      </Swiper>
+    </div>
     <beautiful-chat
       :participants="participants"
       :titleImageUrl="titleImageUrl"
@@ -18,8 +31,14 @@
   </div>
 </template>
 <script>
+import { Swiper, Slide } from 'vue-swiper-component';
+
 export default {
   name:"news",
+  components:{
+    Swiper,
+    Slide
+  },
 data() {
     return {
       ws:null,
@@ -36,7 +55,7 @@ data() {
         //   imageUrl: 'https://avatars3.githubusercontent.com/u/37018832?s=200&v=4'
         // }
       ], // the list of all the participant of the conversation. `name` is the user name, `id` is used to establish the author of a message, `imageUrl` is supposed to be the user avatar.
-      titleImageUrl: 'https://a.slack-edge.com/66f9/img/avatars-teams/ava_0001-34.png',
+      titleImageUrl: 'http://pic.baike.soso.com/p/20131108/20131108161106-1643559090.jpg',
       messageList: [
           // { type: 'text', author: `me`, data: { text: `Say yes!` } },
           // { type: 'text', author: `user1`, data: { text: `No.` } }
@@ -158,5 +177,9 @@ watch:{
   height:calc(100vh - 66px);
   overflow: hidden;
   overflow-y: auto;
+  .banner img{
+    width: 100vw;
+  }
 }
+
 </style>

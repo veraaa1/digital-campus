@@ -1,6 +1,11 @@
 <template>
   <div class="check">
-    <h1>审批</h1>
+    <mt-header title="审批" fixed>
+            <router-link to="/oa" slot="left">
+                <mt-button icon="back">返回</mt-button>
+            </router-link>
+            <mt-button icon="more" slot="right"></mt-button>
+        </mt-header>
     <router-link to="/oa/check/mycreatecheck">我发起的</router-link>
     <router-link to="/oa/check/mycheck">我审批的
     <!-- <mt-badge size="small">30</mt-badge> -->
@@ -28,5 +33,12 @@ export default {
 <style lang="scss" scoped>
 a{
   padding: 10px;
+}
+.check{
+    width: 100vw;
+    height: calc(100vh - 66px - 40px);
+    margin-top: 40px;
+    overflow: hidden;
+    overflow-y: auto;
 }
 </style>

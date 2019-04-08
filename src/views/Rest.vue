@@ -1,17 +1,26 @@
 <template>
     <div class="rest">
-        <h1>请假</h1>
-        <form action="">
-            <label for="start">开始时间</label>
-        <input type="text" name="" id="start" v-model="startTime" @focus="openStartPicker">
-        <label for="end">结束时间</label>
-        <input type="text" id="end" v-model="endTime" @focus="openEndPicker">
-        <label for="days">请假天数</label>
-        <input type="number" name="" id="days" v-model="restDays">
-        <label for="reason">请假事由</label>
-        <textarea name="" id="reason" cols="30" rows="10"></textarea>
-        <button type="submit">提交</button>
-        </form>
+        <mt-header title="请假" fixed>
+            <router-link to="/oa/check" slot="left">
+                <mt-button icon="back">返回</mt-button>
+            </router-link>
+            <mt-button icon="more" slot="right"></mt-button>
+        </mt-header>
+        <el-form>
+        <el-form-item label="开始时间">
+            <el-input type="text" name="" id="start" v-model="startTime" @focus="openStartPicker"></el-input>
+        </el-form-item>
+        <el-form-item label="结束时间">
+            <el-input type="text" id="end" v-model="endTime" @focus="openEndPicker"></el-input>
+        </el-form-item>
+        <el-form-item label="请假天数">
+            <el-input type="number" name="" id="days" v-model="restDays"></el-input>
+        </el-form-item>
+        <el-form-item label="请假事由">
+            <el-input type="textarea" name="" id="reason" cols="30" rows="10"></el-input>
+        </el-form-item>
+        <el-button type="primary">提交</el-button>
+        </el-form>
         
         <div class="date-picker">
 
@@ -58,11 +67,12 @@ export default {
 <style lang="scss" scoped>
 .rest{
     width: 100vw;
-    height: calc(100vh - 66px);
+    height: calc(100vh - 66px - 40px);
+    margin-top: 40px;
     overflow: hidden;
     overflow-y: auto;
     form{
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
