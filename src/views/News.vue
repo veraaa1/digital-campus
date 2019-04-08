@@ -1,9 +1,13 @@
 <template>
   <div class="news">
     <div class="title">
-        <p>{{user.Tname}},欢迎您</p>
-        <p>{{today}}</p>
-        <h2>{{week}}</h2>
+      <img src="../../node_modules/vue-beautiful-chat/src/assets/chat-icon.png" alt="">
+        <p style="position:absolute;right:10px;top:22px;font-size:14px;color:#707070">{{user.Tname}},欢迎您</p>
+       <div class="two">
+         <h1>{{week}}</h1>
+         <p>{{today}}</p>
+       </div>
+        
     </div>
     
     <div class="banner">
@@ -25,7 +29,7 @@
         
         <ul class="item">
             <li v-for="item in listData" @click="getData(item)" :key="item.title">
-                <span class="title" v-text="item.title"></span><span class="date" v-text="item.date"></span>
+                <span>您的日程：</span><span class="title" v-text="item.title"></span><span class="date" v-text="item.date"></span>
             </li>
         </ul>
     </vue-seamless-scroll>
@@ -79,13 +83,7 @@ export default {
 data() {
     return {
       
-      listData: [{
-                'title': '公告1',
-                'date': '2017-12-16'
-            }, {
-                'title': '公告2',
-                'date': '2017-12-16'
-            }],
+      listData: [],
             
       newsList:[
         {
@@ -119,23 +117,9 @@ data() {
       departList:[],
       today:'',
       week:'',
-      participants: [
-        // {
-        //   id: 'user1',
-        //   name: 'Matteo',
-        //   imageUrl: 'https://avatars3.githubusercontent.com/u/1915989?s=230&v=4'
-        // },
-        // {
-        //   id: 'user2',
-        //   name: 'Support',
-        //   imageUrl: 'https://avatars3.githubusercontent.com/u/37018832?s=200&v=4'
-        // }
-      ], // the list of all the participant of the conversation. `name` is the user name, `id` is used to establish the author of a message, `imageUrl` is supposed to be the user avatar.
+      participants: [], // the list of all the participant of the conversation. `name` is the user name, `id` is used to establish the author of a message, `imageUrl` is supposed to be the user avatar.
       titleImageUrl: 'http://pic.baike.soso.com/p/20131108/20131108161106-1643559090.jpg',
-      messageList: [
-          // { type: 'text', author: `me`, data: { text: `Say yes!` } },
-          // { type: 'text', author: `user1`, data: { text: `No.` } }
-      ], // the list of the messages to show, can be paginated and adjusted dynamically
+      messageList: [], // the list of the messages to show, can be paginated and adjusted dynamically
       newMessagesCount: 0,
       isChatOpen: false, // to determine whether the chat window should be open or closed
       showTypingIndicator: '', // when set to a value matching the participant.id it shows the typing indicator for the specific user
@@ -241,10 +225,17 @@ watch:{
  },
  created(){
    let day = new Date()
+   var self = this
    this.today = `${day.getMonth()+1}月${day.getDate()}日`
    let m = day.getDay()
    this.week = m===1?'Mon.':m===2?'Tues.':m===3?'Wed.':m===4?'Thurs':m===5?'Fri.':m===6?'Sat.':'Sun.'
    this.$store.dispatch('getTCollections')
+  this.user.mydayliredords.forEach(function(val,ind){
+    self.listData.push({
+      title:val.title,
+      date:` ,起始日期${val.start.replace('T',' ')}`
+    })
+  })
     this.$store.state.all.forEach(e=>{
       if(e.TeachDepartMent == this.user.TeachDepartMent){
         this.participants.push({
@@ -263,6 +254,7 @@ watch:{
                     type: 'setname'
                 }));
             }
+    
  },
  
 }
@@ -274,6 +266,28 @@ watch:{
   overflow-y: auto;
   .banner img{
     width: 100vw;
+  }
+  .title{
+    width: 100vw;
+    position: relative;
+    >img{
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+      margin-top: 10px
+    }
+    .two{
+      width: 100vw;
+      display: flex;
+      justify-content: flex-start;
+      padding:10px ;
+      >p{
+        padding-top: 16px;
+        padding-left:10px;
+        color: #707070
+      }
+     
+    }
   }
   .seamless-warp {
         width: 100%;
