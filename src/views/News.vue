@@ -1,6 +1,7 @@
 <template>
   <div class="news">
     <div class="title">
+      
       <img src="../../node_modules/vue-beautiful-chat/src/assets/chat-icon.png" alt="">
         <p style="position:absolute;right:10px;top:22px;font-size:14px;color:#707070">{{user.Tname}},欢迎您</p>
        <div class="two">
