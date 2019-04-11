@@ -42,10 +42,12 @@
     <p style="border-bottom:3px solid #409EFF;width:90px;text-align:center;margin-left:10px;font-size:20px;padding-bottom:5px;">燕园系统</p>
     <div class="system">
 
-            <el-button type="primary">个人主页</el-button>
-            <el-button type="success">科研系统</el-button>
-            <el-button type="warning">教务系统</el-button>
-            <el-button type="danger">办公系统</el-button> 
+            <el-button type="primary">
+              <img src="../assets/gerenzhuye.png" alt="">
+              <p style="font-size:14px;margin-top:5px">个人主页</p></el-button>
+            <el-button type="success"><img src="../assets/keyanxitong.png" alt=""><p style="font-size:14px;margin-top:5px">科研系统</p></el-button>
+            <el-button type="warning"><img src="../assets/jiaowuxitong.png" alt=""><p style="font-size:14px;margin-top:5px">教务系统</p></el-button>
+            <el-button type="danger"><img src="../assets/bangong.png" alt=""><p style="font-size:14px;margin-top:5px">办公系统</p></el-button> 
     </div>
     <div class="new">
       <p style="border-bottom:3px solid #409EFF;width:90px;text-align:center;margin-left:10px;font-size:20px;padding-bottom:5px;">校园新闻</p>

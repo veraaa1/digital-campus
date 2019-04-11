@@ -7,9 +7,9 @@
     <div class="cato round">
       <p>快捷服务</p>
       <div>
-        <div><router-link to="/oa/check" style="background-color:#409eff"><img src=""/></router-link><span>智能审批</span></div>
-      <div><a href="javascript:;" @click="handleChangeType('rest')" style="background-color:#5a4dff"><img src=""/></a><span>请假申报</span></div>
-      <div><router-link to="/oa/attendence" style="background-color:#ffac30"><img src=""/></router-link><span>定点考勤</span></div>
+        <div><router-link to="/oa/check" style="background-color:#409eff"><img src="../assets/zhinengshenpi.png"/></router-link><span>智能审批</span></div>
+      <div><a href="javascript:;" @click="handleChangeType('rest')" style="background-color:#5a4dff"><img src="../assets/qingjiashenpi.png"/></a><span>请假申报</span></div>
+      <div><router-link to="/oa/attendence" style="background-color:#ffac30"><img src="../assets/diingdiankaoqin.png"/></router-link><span>定点考勤</span></div>
       <div><a href="javascript:;"></a></div>
       </div>
       
@@ -25,30 +25,30 @@
     <div class="cato round">
       <p>生活服务</p>
       <div>
-        <div><a href="javascript:;" style="background-color:#ff3030"><img src=""/></a><span>安全保卫</span></div>
-        <div><a href="javascript:;" style="background-color:#4bbfbf"><img src=""/></a><span>维修服务</span></div>
-        <div><a href="javascript:;" style="background-color:#ff9d30"><img src=""/></a><span>职工医疗</span></div>
-        <div><a href="javascript:;" style="background-color:#ffe430"><img src=""/></a><span>户口办理</span></div>
-        <div><a href="javascript:;" style="background-color:#5a4dff"><img src=""/></a><span>门禁授权</span></div>
-        <div><a href="javascript:;" style="background-color:#ffc330"><img src=""/></a><span>公积金提取</span></div>
-        <div><a href="javascript:;" style="background-color:#5a6abf"><img src=""/></a><span>出国审批</span></div>
-        <div><a href="javascript:;" style="background-color:#ff6830"><img src=""/></a><span>视觉形象</span></div>
+        <div><a href="javascript:;" style="background-color:#ff3030"><img src="../assets/anquanbaowei.png"/></a><span>安全保卫</span></div>
+        <div><a href="javascript:;" style="background-color:#4bbfbf"><img src="../assets/weixiufuwu.png"/></a><span>维修服务</span></div>
+        <div><a href="javascript:;" style="background-color:#ff9d30"><img src="../assets/zhigongyiliao.png"/></a><span>职工医疗</span></div>
+        <div><a href="javascript:;" style="background-color:#ffe430"><img src="../assets/hukoubanli.png"/></a><span>户口办理</span></div>
+        <div><a href="javascript:;" style="background-color:#5a4dff"><img src="../assets/menjinshouquan.png"/></a><span>门禁授权</span></div>
+        <div><a href="javascript:;" style="background-color:#ffc330"><img src="../assets/gongjijintiqu.png"/></a><span>公积金提取</span></div>
+        <div><a href="javascript:;" style="background-color:#5a6abf"><img src="../assets/chuguoshenpi.png"/></a><span>出国审批</span></div>
+        <div><a href="javascript:;" style="background-color:#ff6830"><img src="../assets/shijuexingxiang.png"/></a><span>视觉形象</span></div>
       </div>
       
     </div>
     <div class="cato round">
       <p>网络服务</p>
       <div>
-        <div><a href="javascript:;" style="background-color:#409eff"><img src=""/></a><span>实名认证</span></div>
-      <div><a href="javascript:;" style="background-color:#7c46ff"><img src=""/></a><span>远程登录</span></div>
-      <div><a href="javascript:;"><img src=""/></a></div>
-      <div><a href="javascript:;"><img src=""/></a></div>
+        <div><a href="javascript:;" style="background-color:#409eff"><img src="../assets/shimingrenzheng.png"/></a><span>实名认证</span></div>
+      <div><a href="javascript:;" style="background-color:#7c46ff"><img src="../assets/yuanchengdenglu.png"/></a><span>远程登录</span></div>
+      <div><a href="javascript:;"></a></div>
+      <div><a href="javascript:;"></a></div>
       </div>
     </div>
     <div class="cato">
       <p>行政资源</p>
       <div>
-        <div><a href="javascript:;" style="background-color:#ffc330"><img src=""/></a><span>学校印章使用</span></div>
+        <div><a href="javascript:;" style="background-color:#ffc330"><img src="../assets/yinzhang.png"/></a><span>学校印章使用</span></div>
       </div>
       
     </div>
@@ -128,6 +128,10 @@ a{
     color: #fff;
     font-size: 12px;
     text-decoration: none;
+    >img{
+      width: 36px;
+      height: 36px;
+    }
     
   }
   .el-button{

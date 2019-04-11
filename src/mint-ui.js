@@ -1,5 +1,6 @@
 import Vue from "vue";
-import { Tabbar, TabItem,DatetimePicker,Toast,Popup,Picker,Field,Header,Button,Badge} from 'mint-ui';
+import { Tabbar, TabItem,DatetimePicker,Toast,Popup,Picker,Field,Header,Button,Badge,Search} from 'mint-ui';
+Vue.component(Search.name, Search);
 Vue.component(Tabbar.name, Tabbar);
 Vue.component(TabItem.name, TabItem);
 Vue.component(DatetimePicker.name, DatetimePicker);
