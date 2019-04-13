@@ -6,14 +6,18 @@
             </router-link>
             <mt-button icon="more" slot="right"></mt-button>
         </mt-header>
-    <router-link to="/oa/check/mycreatecheck">我发起的</router-link>
-    <router-link to="/oa/check/mycheck">我审批的
-    <!-- <mt-badge size="small">30</mt-badge> -->
-    </router-link>
-    <div>
-        <a href="javascript:;" @click="handleChangeType('purchase')">采购审批</a>
-        <a href="javascript:;" @click="handleChangeType('kpi')">绩效自评</a>
-        <a href="javascript:;" @click="handleChangeType('pact')">通用审批</a>
+        <div class="about-me">
+          <router-link to="/oa/check/mycreatecheck"><img src="../assets/wofaqide.png"/><p>我发起的</p></router-link>
+          <router-link to="/oa/check/mycheck">
+          <img src="../assets/woshenpide.png" alt="">
+          <p>我审批的</p>
+          <!-- <mt-badge size="small">30</mt-badge> -->
+          </router-link>
+        </div>
+    <div class="check-list">
+        <a href="javascript:;" @click="handleChangeType('purchase')"><img src="../assets/caigou.png"/><span>采购审批</span></a>
+        <a href="javascript:;" @click="handleChangeType('kpi')"><img src="../assets/jixiao.png"/><span>绩效自评</span></a>
+        <a href="javascript:;" @click="handleChangeType('pact')"><img src="../assets/tongyong.png"/><span>通用审批</span></a>
     </div>
   </div>
 </template>
@@ -40,5 +44,37 @@ a{
     margin-top: 40px;
     overflow: hidden;
     overflow-y: auto;
+    background-color: #eee;
+    >.about-me{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 20px 0;
+      background: #fff;
+      >a{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-decoration: none;
+        color: #707070;
+      }
+    }
+    .check-list{
+      width: 100%;
+      background-color: #fff;
+      margin-top: 20px;
+      >a{
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #707070;
+        border-bottom: 1px solid #eee;
+        span{
+          padding-left: 20px
+        }
+      }
+    }
 }
 </style>

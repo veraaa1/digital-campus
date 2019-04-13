@@ -7,7 +7,7 @@
     <mt-button icon="more" slot="right"></mt-button>
     </mt-header>
     <el-form action="">
-      <el-form-item label="日程">
+      <el-form-item label="日程" style="width:80%;margin:0 auto;margin-bottom:20px;">
         <el-input v-model="currentVal"></el-input>
       </el-form-item>
     </el-form>

@@ -181,7 +181,7 @@ export default {
                 })
                 })
       })
-      console.log(self.checkPurchaseList,self.checkKpiListst);
+   
     }
 }
 </script>

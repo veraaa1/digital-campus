@@ -3,7 +3,7 @@
       <div class="idcard"> 
         <img src="../../node_modules/vue-beautiful-chat/src/assets/chat-icon.png" alt="">
         <h2>{{user.Tname}}</h2>
-        <p style="font-size:14px;padding:10px 0;">{{user.Torgnization}}-{{user.TeachCareer}}</p>
+        <p style="font-size:14px;padding:10px 0;">{{user.Torgnization}}-{{user.TeachCareer}}({{user.TeachDepartMent}})</p>
         <div>
           <img src="../assets/二维码.png" alt="">
         </div>

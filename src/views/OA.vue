@@ -17,8 +17,8 @@
     <div class="cato"> 
       <p>人事统计</p>
       <div>
-        <div><el-button>0</el-button><span>待我审批</span></div>
-      <div><el-button>6</el-button><span>考勤统计</span></div>
+        <div><el-button @click="gotoCheck">{{num}}</el-button><span>待我审批</span></div>
+      <div><el-button>0</el-button><span>考勤统计</span></div>
       </div>
       
     </div>
@@ -57,10 +57,16 @@
 <script>
 export default {
   name:"oa",
+  data:()=>({
+    num:0
+  }),
   computed:{
    user(){
      return JSON.parse(sessionStorage.getItem('userInfo'))
-   }
+   },
+  all(){
+    return this.$store.state.all
+  }
  },
  methods:{
    handleChangeType(type){
@@ -68,7 +74,49 @@ export default {
       this.$router.push({
         path:`/oa/${type}`
       })
+    },
+    gotoCheck(){
+      this.$router.push({
+        name:'mycheckneed'
+      })
     } 
+ },
+ created(){
+   let self = this
+   
+   this.$nextTick(function(){
+           
+           
+            self.all.forEach(function(curVal,index){
+                    curVal.myapprove.purchase.forEach(function(e,ind){
+                    if(e.checkMen.indexOf(self.user.Tname) != -1){
+                        
+                        self.num+=1
+                    }
+                })
+                curVal.myapprove.kpi.forEach(function(e,ind){
+                    if(e.checkMen.indexOf(self.user.Tname) != -1){
+                       
+                         self.num+=1
+                    }
+                })
+                curVal.myapprove.genaral.forEach(function(e,ind){
+                    if(e.checkMen.indexOf(self.user.Tname) != -1){
+                       self.num+=1
+                    }
+                })
+                curVal.myapprove.object.forEach(function(e,ind){
+                    if(e.checkMen.indexOf(self.user.Tname) != -1){
+                        self.num+=1
+                    }
+                })
+                curVal.myrest.forEach(function(e,ind){
+                    if(e.checkMen.indexOf(self.user.Tname) === 0){
+                         self.num+=1
+                    }
+                })
+                })
+      })
  }
 }
 </script>
