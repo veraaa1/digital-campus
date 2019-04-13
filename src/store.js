@@ -102,7 +102,7 @@ export default new Vuex.Store({
   actions: {
 
     getTCollections({commit}){
-      axios.get(`http:129.204.120.66:3088/teacherCollections?Tpwd=${sessionStorage.getItem('Tpwd')}&TCardId=${sessionStorage.getItem('Tcard')}`).then(res=>{
+      axios.get(`http://129.204.120.66:3088/teacherCollections?Tpwd=${sessionStorage.getItem('Tpwd')}&TCardId=${sessionStorage.getItem('Tcard')}`).then(res=>{
         console.log(res.data)
         sessionStorage.setItem('userInfo',JSON.stringify(res.data[0]))
         commit('getTCollections',res.data[0])
@@ -110,7 +110,7 @@ export default new Vuex.Store({
       
     },
     getAll({commit}){
-      axios.get(`http:129.204.120.66:3088/teacherCollections`).then(res=>{
+      axios.get(`http://129.204.120.66:3088/teacherCollections`).then(res=>{
         commit('getAll',res.data)
       })
     },
@@ -124,7 +124,7 @@ export default new Vuex.Store({
       let newObj = state.all.find(e=>e.Tname===JSON.parse(sessionStorage.getItem('userInfo')).Tname)
       let approve={...newObj.myapprove}
       approve.purchase.push(obj)
-      axios.patch(`http:129.204.120.66:3088/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{myapprove:approve}).then(res=>{
+      axios.patch(`http://129.204.120.66:3088/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{myapprove:approve}).then(res=>{
         commit('confirmPurchaseCheck',obj)
       })
     },
@@ -132,14 +132,14 @@ export default new Vuex.Store({
       let newObj = state.all.find(e=>e.Tname===JSON.parse(sessionStorage.getItem('userInfo')).Tname)
       let dayliredords=[...newObj.mydayliredords]
       dayliredords.push(obj)
-      axios.patch(`http:129.204.120.66:3088/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{mydayliredords:dayliredords}).then(res=>{
+      axios.patch(`http://129.204.120.66:3088/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{mydayliredords:dayliredords}).then(res=>{
         commit('addEvent',obj)
       })
     },
     deleteEvent({commit,state},title){
       let newObj = state.all.find(e=>e.Tname===JSON.parse(sessionStorage.getItem('userInfo')).Tname)
       let dayliredords=[...newObj.mydayliredords].filter(e=>e.title!=title)
-      axios.patch(`http:129.204.120.66:3088/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{mydayliredords:dayliredords}).then(res=>{
+      axios.patch(`http://129.204.120.66:3088/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{mydayliredords:dayliredords}).then(res=>{
         commit('deleteEvent',title)
       })
       
@@ -151,7 +151,7 @@ export default new Vuex.Store({
     autoAddCheck({commit,state},{career,department}){
       console.log(career,department);
       
-      axios.get(`http:129.204.120.66:3088/teacherCollections?TeachCareer=${career}&TeachDepartMent=${department}`).then(res=>{
+      axios.get(`http://129.204.120.66:3088/teacherCollections?TeachCareer=${career}&TeachDepartMent=${department}`).then(res=>{
         const Tarr = res.data
         console.log(res.data)
         if(Tarr.length>1){
@@ -177,18 +177,20 @@ export default new Vuex.Store({
     },
     // 审批通过
     passCheck({commit,state},{card,reason,type}){
-      // console.log(card);
-      // console.log(reason);
+      console.log(card);
+      console.log(reason,type);
       if(type !== 'genaral'){
         if(type === 'myrest'){
           let item = state.all.find(e=>e.id == card).myrest[0]
           console.log(item)
           item.checkStatus.push(1)
+          
           delete item.checkName
           delete item.Tcard
         }else{
           let item = state.all.find(e=>e.id == card).myapprove[type][0]
           item.checkStatus = 1
+          
           delete item.checkName
           delete item.Tcard
         }
@@ -202,24 +204,24 @@ export default new Vuex.Store({
       
       
       // state.all.find(e=>e.id == card).myapprove[type]= [...state.all.find(e=>e.id == card).myapprove[type]]
-      state.all= [...state.all]
+      // state.all= [...state.all]
       console.log(state.all.find(e=>e.id == card).myapprove[type]);
       if(type!=='genaral'){
         if(type ==='myrest'){
-          axios.patch(`http:129.204.120.66:3088/teacherCollections/${card}`,{
+          axios.patch(`http://129.204.120.66:3088/teacherCollections/${card}`,{
         myrest: [...state.all.find(e=>e.id == card).myrest]
       }).then(res=>{
         commit('passCheck',{card,reason,type})
       })
         }else{
-          axios.patch(`http:129.204.120.66:3088/teacherCollections/${card}`,{
+          axios.patch(`http://129.204.120.66:3088/teacherCollections/${card}`,{
             myapprove: {...state.all.find(e=>e.id == card).myapprove}
           }).then(res=>{
             commit('passCheck',{card,reason,type})
           })
         }
       }else{
-        axios.patch(`http:129.204.120.66:3088/teacherCollections/${card}`,{
+        axios.patch(`http://129.204.120.66:3088/teacherCollections/${card}`,{
         myapprove: {...state.all.find(e=>e.id == card).myapprove}
       }).then(res=>{
         commit('passCheck',{card,reason,type})
@@ -255,20 +257,20 @@ export default new Vuex.Store({
       console.log(state.all.find(e=>e.id == card).myapprove[type]);
       if(type!=='genaral'){
         if(type ==='myrest'){
-          axios.patch(`http:129.204.120.66:3088/teacherCollections/${card}`,{
+          axios.patch(`http://129.204.120.66:3088/teacherCollections/${card}`,{
         myrest: [...state.all.find(e=>e.id == card).myrest]
       }).then(res=>{
         commit('passCheck',{card,reason,type})
       })
         }else{
-          axios.patch(`http:129.204.120.66:3088/teacherCollections/${card}`,{
+          axios.patch(`http://129.204.120.66:3088/teacherCollections/${card}`,{
             myapprove: {...state.all.find(e=>e.id == card).myapprove}
           }).then(res=>{
             commit('passCheck',{card,reason,type})
           })
         }
       }else{
-        axios.patch(`http:129.204.120.66:3088/teacherCollections/${card}`,{
+        axios.patch(`http://129.204.120.66:3088/teacherCollections/${card}`,{
         myapprove: {...state.all.find(e=>e.id == card).myapprove}
       }).then(res=>{
         commit('passCheck',{card,reason,type})
@@ -287,7 +289,7 @@ export default new Vuex.Store({
       // delete item.Tcard
       // }
       // state.all.find(e=>e.id == card).myapprove[type]= [...state.all.find(e=>e.id == card).myapprove[type]]
-      // axios.patch(`http:129.204.120.66:3088/teacherCollections/${card}`,{
+      // axios.patch(`http://129.204.120.66:3088/teacherCollections/${card}`,{
       //   myapprove: {...state.all.find(e=>e.id == card).myapprove}
       // }).then(res=>{
       //   commit('cancelCheck',{card,reason,type})
@@ -300,7 +302,7 @@ export default new Vuex.Store({
       approve.kpi.push(obj)
       console.log(approve);
       
-      axios.patch(`http:129.204.120.66:3088/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{myapprove:approve}).then(res=>{
+      axios.patch(`http://129.204.120.66:3088/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{myapprove:approve}).then(res=>{
         commit('confirmKPICheck',obj)
       })
     },
@@ -311,7 +313,7 @@ export default new Vuex.Store({
       approve.genaral.push(obj)
       console.log(approve);
       
-      axios.patch(`http:129.204.120.66:3088/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{myapprove:approve}).then(res=>{
+      axios.patch(`http://129.204.120.66:3088/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{myapprove:approve}).then(res=>{
         commit('confirmPact',obj)
       })
     },
@@ -322,7 +324,7 @@ export default new Vuex.Store({
       let rest = [...newObj.myrest]
       console.log(rest,obj);
       
-      axios.patch(`http:129.204.120.66:3088/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{myrest:rest}).then(res=>{
+      axios.patch(`http://129.204.120.66:3088/teacherCollections/${JSON.parse(sessionStorage.getItem('userInfo')).id}`,{myrest:rest}).then(res=>{
         console.log(res.data);
         
         commit('confirmRest',obj)

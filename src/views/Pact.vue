@@ -67,7 +67,7 @@ export default {
     confirmPact(){
         console.log(this.genaralForm);
         this.$store.dispatch('confirmPact',this.genaralForm)
-        MessageBox.alert('温馨提示','您的审批提交成功，已送达审批人').then(action => {
+        MessageBox.alert('您的审批提交成功，已送达审批人','温馨提示').then(action => {
             this.$router.push({
                 path:'/oa/check/mycreatecheck'
             })

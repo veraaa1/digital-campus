@@ -25,12 +25,14 @@ export default {
   inject:['reload'],
   computed:{
   },
+  created(){
+    this.$store.dispatch('getAll')
+  },
   methods:{
     login(){
       if(this.pwd.trim()&&this.cardId.trim())
       {
-        console.log(this.$store.state.all.find(e=>e.TCardId == this.cardId));
-        
+       
         if(this.$store.state.all.find(e=>e.TCardId == this.cardId && e.Tpwd == this.pwd)){
            sessionStorage.setItem('Tcard',this.cardId)
            sessionStorage.setItem('Tpwd',this.pwd)
@@ -51,9 +53,7 @@ export default {
        
     }
   },
-  beforeUpdate(){
-    
-  }
+
 }
 </script>
 <style lang="scss" scoped>

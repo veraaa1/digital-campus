@@ -79,7 +79,7 @@ export default {
     confirmKpi(){
         console.log(this.kpiForm);
         this.$store.dispatch('confirmKPICheck',this.kpiForm)
-        MessageBox.alert('温馨提示','您的绩效审批提交成功，已送达审批人').then(action => {
+        MessageBox.alert('您的绩效审批提交成功，已送达审批人','温馨提示').then(action => {
             this.$router.push({
                 path:'/oa/check/mycreatecheck'
             })

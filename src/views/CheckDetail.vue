@@ -126,15 +126,15 @@ computed:{
     }
 },
 created(){
-    console.log(this.lists)
+    let self = this
     this.$store.dispatch('getTCollections')
     this.$nextTick(function(){
-        this.lists = this.$store.state.teacherCollections
-        if(this.lists.myapprove.purchase.length == 0&& this.lists.myapprove.kpi.length==0&& this.lists.myapprove.genaral.length==0&&this.lists.myrest.length==0){
-            
-            this.isEmpty= true
+        self.lists = self.$store.state.teacherCollections
+        console.log(self.lists)
+        if(self.lists.myapprove.purchase.length == 0&& self.lists.myapprove.kpi.length==0&& self.lists.myapprove.genaral.length==0&&self.lists.myrest.length==0){
+            self.isEmpty= true
         }else
-        this.isEmpty = false
+        self.isEmpty = false
     })
     
 }

@@ -103,7 +103,7 @@ export default {
     confirmRest(){
         console.log(this.restForm);
         this.$store.dispatch('confirmRest',this.restForm)
-        MessageBox.alert('温馨提示','您的请假审批提交成功，已送达审批人').then(action => {
+        MessageBox.alert('您的请假审批提交成功，已送达审批人','温馨提示').then(action => {
             this.$router.push({
                 path:'/oa/check/mycreatecheck'
             })
