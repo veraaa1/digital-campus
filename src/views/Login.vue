@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-   
+   <img src="../assets/logo-s.jpg" alt="">
     <el-form label-position="right" label-width="80px" >
       <el-form-item label="工号">
         <el-input v-model="cardId"></el-input>
@@ -10,9 +10,11 @@
       </el-form-item>
       <el-button type="primary" @click="login" :pwd="pwd" :cardId="cardId">登录</el-button>
     </el-form>
+    <img src="../assets/school.jpg" alt="">
   </div>
 </template>
 <script>
+import {MessageBox} from 'mint-ui'
 export default {
   name:"login",
   data:()=>({
@@ -41,10 +43,10 @@ export default {
           
            
         }else{
-          alert('工号和密码不匹配，请重新输入')
+          MessageBox('工号和密码不匹配，请重新输入','温馨提示')
         }
       }else{
-        alert('您输入字段有误,请重新输入')
+        MessageBox('您输入字段有误,请重新输入','温馨提示')
       }
        
     }
@@ -56,11 +58,24 @@ export default {
 </script>
 <style lang="scss" scoped>
 .login{
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
+    >img:first-child{
+      width: 30%;
+      margin: 0 auto;
+      display: block;
+      margin-top: 12%
+    }
     form{
+      width: 80%;
+      margin: 0 auto;
         display: flex;
         flex-direction: column;
+        margin-top: 12%
+    }
+    >img:last-child{
+      width: 100%;
+      position: absolute;
+      bottom: 0;
     }
 }
 </style>

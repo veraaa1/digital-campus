@@ -54,14 +54,32 @@ export default new Vuex.Store({
     passCheck(state,{card,reason,type}){
       // console.log(state.all.find(e=>e.id == card));
       // console.log(state.all.find(e=>e.id == card).myapprove.find(e=>e.reason == reason));
-      let item = state.all.find(e=>e.id == card).myapprove[type][0]
-      item.checkStatus = 1
-      state.all = [...state.all]  
+      if(type == 'myrest'){
+        let item = state.all.find(e=>e.id == card).myrest[0]
+        if(item.checkStatus.length<3){
+          item.checkStatus.push(1)
+          
+        }
+      }else{
+        let item = state.all.find(e=>e.id == card).myapprove[type][0]
+        item.checkStatus = 1
+        
+      }
+      state.all = [...state.all]
+      
     },
     // 驳回审批
     cancelCheck(state,{card,reason,type}){
+      if(type == 'myrest'){
+        let item = state.all.find(e=>e.id == card).myrest[0]
+        if(item.checkStatus.length<3){
+          item.checkStatus.push(-1)
+          
+        }
+      }else{
       let item = state.all.find(e=>e.id == card).myapprove[type][0]
       item.checkStatus = -1
+      }
       state.all = [...state.all] 
     },
     // 绩效审批添加
@@ -161,51 +179,119 @@ export default new Vuex.Store({
     passCheck({commit,state},{card,reason,type}){
       // console.log(card);
       // console.log(reason);
-      console.log(state.all.find(e=>e.id == card).myapprove[type][0]);
       if(type !== 'genaral'){
-        let item = state.all.find(e=>e.id == card).myapprove[type][0]
-      item.checkStatus = 1
-      delete item.checkName
-      delete item.Tcard
-      console.log(item);
+        if(type === 'myrest'){
+          let item = state.all.find(e=>e.id == card).myrest[0]
+          console.log(item)
+          item.checkStatus.push(1)
+          delete item.checkName
+          delete item.Tcard
+        }else{
+          let item = state.all.find(e=>e.id == card).myapprove[type][0]
+          item.checkStatus = 1
+          delete item.checkName
+          delete item.Tcard
+        }
+      
       }else{
         let item = state.all.find(e=>e.id == card).myapprove[type].find(e=>e.id == reason)
-        
       item.checkStatus = 1
       delete item.checkName
       delete item.Tcard
       }
       
       
-      state.all.find(e=>e.id == card).myapprove[type]= [...state.all.find(e=>e.id == card).myapprove[type]]
+      // state.all.find(e=>e.id == card).myapprove[type]= [...state.all.find(e=>e.id == card).myapprove[type]]
+      state.all= [...state.all]
       console.log(state.all.find(e=>e.id == card).myapprove[type]);
-      
-      // axios.patch(`http://localhost:3008/teacherCollections/${card}`,{
-      //   myapprove: {...state.all.find(e=>e.id == card).myapprove}
-      // }).then(res=>{
+      if(type!=='genaral'){
+        if(type ==='myrest'){
+          axios.patch(`http://localhost:3008/teacherCollections/${card}`,{
+        myrest: [...state.all.find(e=>e.id == card).myrest]
+      }).then(res=>{
         commit('passCheck',{card,reason,type})
-      // })
+      })
+        }else{
+          axios.patch(`http://localhost:3008/teacherCollections/${card}`,{
+            myapprove: {...state.all.find(e=>e.id == card).myapprove}
+          }).then(res=>{
+            commit('passCheck',{card,reason,type})
+          })
+        }
+      }else{
+        axios.patch(`http://localhost:3008/teacherCollections/${card}`,{
+        myapprove: {...state.all.find(e=>e.id == card).myapprove}
+      }).then(res=>{
+        commit('passCheck',{card,reason,type})
+      })
+      }
     },
     // 驳回审批
     cancelCheck({commit,state},{card,reason,type}){
-      console.log(state.all.find(e=>e.id == card).myapprove[type]);
       if(type !== 'genaral'){
-      let item = state.all.find(e=>e.id == card).myapprove[type][0]
-      item.checkStatus = -1
-      delete item.checkName
-      delete item.Tcard
+        if(type === 'myrest'){
+          let item = state.all.find(e=>e.id == card).myrest[0]
+          console.log(item)
+          item.checkStatus.push(-1)
+          delete item.checkName
+          delete item.Tcard
+        }else{
+          let item = state.all.find(e=>e.id == card).myapprove[type][0]
+          item.checkStatus = -1
+          delete item.checkName
+          delete item.Tcard
+        }
+      
       }else{
-        let item = state.all.find(e=>e.id == card).myapprove[type].find(e=>e.id === reason)
+        let item = state.all.find(e=>e.id == card).myapprove[type].find(e=>e.id == reason)
       item.checkStatus = -1
       delete item.checkName
       delete item.Tcard
       }
-      state.all.find(e=>e.id == card).myapprove[type]= [...state.all.find(e=>e.id == card).myapprove[type]]
-      axios.patch(`http://localhost:3008/teacherCollections/${card}`,{
+      
+      
+      // state.all.find(e=>e.id == card).myapprove[type]= [...state.all.find(e=>e.id == card).myapprove[type]]
+      state.all= [...state.all]
+      console.log(state.all.find(e=>e.id == card).myapprove[type]);
+      if(type!=='genaral'){
+        if(type ==='myrest'){
+          axios.patch(`http://localhost:3008/teacherCollections/${card}`,{
+        myrest: [...state.all.find(e=>e.id == card).myrest]
+      }).then(res=>{
+        commit('passCheck',{card,reason,type})
+      })
+        }else{
+          axios.patch(`http://localhost:3008/teacherCollections/${card}`,{
+            myapprove: {...state.all.find(e=>e.id == card).myapprove}
+          }).then(res=>{
+            commit('passCheck',{card,reason,type})
+          })
+        }
+      }else{
+        axios.patch(`http://localhost:3008/teacherCollections/${card}`,{
         myapprove: {...state.all.find(e=>e.id == card).myapprove}
       }).then(res=>{
-        commit('cancelCheck',{card,reason,type})
+        commit('passCheck',{card,reason,type})
       })
+      }
+      // console.log(state.all.find(e=>e.id == card).myapprove[type]);
+      // if(type !== 'genaral'){
+      // let item = state.all.find(e=>e.id == card).myapprove[type][0]
+      // item.checkStatus = -1
+      // delete item.checkName
+      // delete item.Tcard
+      // }else{
+      //   let item = state.all.find(e=>e.id == card).myapprove[type].find(e=>e.id === reason)
+      // item.checkStatus = -1
+      // delete item.checkName
+      // delete item.Tcard
+      // }
+      // state.all.find(e=>e.id == card).myapprove[type]= [...state.all.find(e=>e.id == card).myapprove[type]]
+      // axios.patch(`http://localhost:3008/teacherCollections/${card}`,{
+      //   myapprove: {...state.all.find(e=>e.id == card).myapprove}
+      // }).then(res=>{
+      //   commit('cancelCheck',{card,reason,type})
+      // })
     },
     // 绩效审批添加
     confirmKPICheck({commit,state},obj){

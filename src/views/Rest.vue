@@ -65,12 +65,13 @@ export default {
         pickerVisible:'',
         pickerStart:new Date(),
         restForm:{
+            id:new Date().getTime(),
             startTime:'',
             endTime:'',
             restDays:0,
             restReason:'',
             checkMen:[],
-            checkStatus:0
+            checkStatus:[]
         }
     }),
     methods:{

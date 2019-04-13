@@ -17,7 +17,7 @@
     <div class="cato"> 
       <p>人事统计</p>
       <div>
-        <div><el-button @click="gotoCheck">{{num}}</el-button><span>待我审批</span></div>
+        <div><el-button @click="gotoCheck">{{num}}</el-button><span>我审批的</span></div>
       <div><el-button>0</el-button><span>考勤统计</span></div>
       </div>
       
@@ -25,14 +25,14 @@
     <div class="cato round">
       <p>生活服务</p>
       <div>
-        <div><a href="javascript:;" style="background-color:#ff3030"><img src="../assets/anquanbaowei.png"/></a><span>安全保卫</span></div>
-        <div><a href="javascript:;" style="background-color:#4bbfbf"><img src="../assets/weixiufuwu.png"/></a><span>维修服务</span></div>
-        <div><a href="javascript:;" style="background-color:#ff9d30"><img src="../assets/zhigongyiliao.png"/></a><span>职工医疗</span></div>
-        <div><a href="javascript:;" style="background-color:#ffe430"><img src="../assets/hukoubanli.png"/></a><span>户口办理</span></div>
-        <div><a href="javascript:;" style="background-color:#5a4dff"><img src="../assets/menjinshouquan.png"/></a><span>门禁授权</span></div>
-        <div><a href="javascript:;" style="background-color:#ffc330"><img src="../assets/gongjijintiqu.png"/></a><span>公积金提取</span></div>
-        <div><a href="javascript:;" style="background-color:#5a6abf"><img src="../assets/chuguoshenpi.png"/></a><span>出国审批</span></div>
-        <div><a href="javascript:;" style="background-color:#ff6830"><img src="../assets/shijuexingxiang.png"/></a><span>视觉形象</span></div>
+        <div><a href="https://bwc.ysu.edu.cn/index.htm" style="background-color:#ff3030"><img src="../assets/anquanbaowei.png"/></a><span>安全保卫</span></div>
+        <div><a href="http://www.weihouqin.cn/agent/app/index.php?i=27&c=home&t=33&winzoom=1" style="background-color:#4bbfbf"><img src="../assets/weixiufuwu.png"/></a><span>维修服务</span></div>
+        <div><a href="https://rsc.ysu.edu.cn/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1244" style="background-color:#ff9d30"><img src="../assets/zhigongyiliao.png"/></a><span>职工医疗</span></div>
+        <div><a href="https://bwc.ysu.edu.cn/list_list.jsp?urltype=tree.TreeTempUrl&wbtreeid=2018" style="background-color:#ffe430"><img src="../assets/hukoubanli.png"/></a><span>户口办理</span></div>
+        <div><a href="https://bwc.ysu.edu.cn/list_list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1993" style="background-color:#5a4dff"><img src="../assets/menjinshouquan.png"/></a><span>门禁授权</span></div>
+        <div><a href="https://bwc.ysu.edu.cn/list_list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1993" style="background-color:#ffc330"><img src="../assets/gongjijintiqu.png"/></a><span>公积金提取</span></div>
+        <div><a href="https://gjhzc.ysu.edu.cn/cgcj1/ygcg_j_glbf.htm" style="background-color:#5a6abf"><img src="../assets/chuguoshenpi.png"/></a><span>出国审批</span></div>
+        <div><a href="https://vis.ysu.edu.cn/index/sjxt.htm" style="background-color:#ff6830"><img src="../assets/shijuexingxiang.png"/></a><span>视觉形象</span></div>
       </div>
       
     </div>
@@ -111,7 +111,7 @@ export default {
                     }
                 })
                 curVal.myrest.forEach(function(e,ind){
-                    if(e.checkMen.indexOf(self.user.Tname) === 0){
+                    if(e.checkMen.indexOf(self.user.Tname) !== -1){
                          self.num+=1
                     }
                 })

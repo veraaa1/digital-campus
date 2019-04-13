@@ -944,32 +944,7 @@
           "allDay": false
         }
       ],
-      "myrest": [
-        {
-          "startTime": "2019年4月8日",
-          "endTime": "2019年4月9日",
-          "restDays": "1",
-          "restReason": "看病",
-          "checkMen": [
-            "周雪赵",
-            "小王元",
-            "吴吴周"
-          ],
-          "checkStatus": 0
-        },
-        {
-          "startTime": "2019年4月9日",
-          "endTime": "2019年4月9日",
-          "restDays": "1",
-          "restReason": "休息",
-          "checkMen": [
-            "周雪赵",
-            "小王元",
-            "王风孙"
-          ],
-          "checkStatus": 0
-        }
-      ]
+      "myrest": []
     },
     {
       "TCardId": "987897196641930414",
@@ -2763,9 +2738,52 @@
       "enterTime": "2006/09/23",
       "leaveTime": "--",
       "myapprove": {
-        "purchase": [],
-        "kpi": [],
-        "genaral": [],
+        "purchase": [
+          {
+            "startDate": "2019-04-13T06:16:40.233Z",
+            "reason": "申请事由",
+            "pType": "tools",
+            "deadDate": "2019年4月14日",
+            "pName": "采购明细-名称",
+            "pSize": "规格",
+            "pNum": 100,
+            "pPart": "本",
+            "pPrice": "12",
+            "payType": "alipay",
+            "pMore": "备注",
+            "checkMen": [
+              "吴王风"
+            ],
+            "checkStatus": 0
+          }
+        ],
+        "kpi": [
+          {
+            "id": 1555137210918,
+            "lastMonthTeachMission": "上月教学任务",
+            "lastMonthActualMission": "实际完成教学任务",
+            "finishRate": "任务达成率",
+            "lastMonthSelfEvaluation": "上月教学任务自评",
+            "curMonthTeachMission": "本月教学人物",
+            "curMonthTeachPlan": "本月教学计划",
+            "checkMen": [
+              "小王元"
+            ],
+            "checkStatus": 0
+          }
+        ],
+        "genaral": [
+          {
+            "id": 1555134027326,
+            "content": "111",
+            "detail": "111111",
+            "file": "C:\\fakepath\\曹贺.任务书.doc",
+            "checkMen": [
+              "小王元"
+            ],
+            "checkStatus": 0
+          }
+        ],
         "object": []
       },
       "myattendencerecords": [],
@@ -2777,7 +2795,25 @@
           "allDay": false
         }
       ],
-      "myrest": []
+      "myrest": [
+        {
+          "id": 1555141100378,
+          "startTime": "2019年4月14日",
+          "endTime": "2019年4月14日",
+          "restDays": "1",
+          "restReason": "请假测试",
+          "checkMen": [
+            "王风孙",
+            "小王元",
+            "孙导雪"
+          ],
+          "checkStatus": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
     },
     {
       "TCardId": "272457409492905005",
@@ -3081,7 +3117,25 @@
       },
       "myattendencerecords": [],
       "mydayliredords": [],
-      "myrest": []
+      "myrest": [
+        {
+          "id": 1555146861853,
+          "startTime": "2019年4月13日",
+          "endTime": "2019年4月14日",
+          "restDays": "1",
+          "restReason": "请假看医生",
+          "checkMen": [
+            "孙周钱",
+            "导雪导",
+            "小郑导"
+          ],
+          "checkStatus": [
+            1,
+            1,
+            -1
+          ]
+        }
+      ]
     },
     {
       "TCardId": "481860006714733979",
