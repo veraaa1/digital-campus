@@ -153,7 +153,7 @@ computed:{
             this.$store.dispatch('cancelCheck',{card,reason,type})
         },
         handlePass(card,reason,type){
-            MessageBox.alert('您确定通过此审批？','温馨提示').then(action => {
+            MessageBox.alert('温馨提示','您确定通过此审批？').then(action => {
             this.pass(card,reason,type)
             this.$router.push({
                 name:'mycheckneed'
@@ -161,7 +161,7 @@ computed:{
         });
         },
         handlecancel(card,reason,type){
-            MessageBox.alert('您确定驳回此审批？','温馨提示').then(action => {
+            MessageBox.alert('温馨提示','您确定驳回此审批？').then(action => {
             this.cancel(card,reason,type)
             this.$router.push({
                 name:'mycheckneed'

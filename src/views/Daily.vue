@@ -33,7 +33,7 @@ export default {
   }),
   methods:{
     onChange(event, jsEvent, view){
-     MessageBox.confirm(`当前日程为：${event.title}，确认要删除该日程吗？`,'日程').then(action => {
+     MessageBox.confirm('日程',`当前日程为：${event.title}，确认要删除该日程吗？`).then(action => {
        if(action){
          this.$refs.calendar.$emit('removeEvent',event)
          this.handleDeleteEvent(event.title)         

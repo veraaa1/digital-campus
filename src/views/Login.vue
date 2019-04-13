@@ -43,10 +43,10 @@ export default {
           
            
         }else{
-          MessageBox('工号和密码不匹配，请重新输入','温馨提示')
+          MessageBox('温馨提示','工号和密码不匹配，请重新输入')
         }
       }else{
-        MessageBox('您输入字段有误,请重新输入','温馨提示')
+        MessageBox('温馨提示','您输入字段有误,请重新输入')
       }
        
     }
