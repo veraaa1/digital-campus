@@ -9,7 +9,9 @@ export default new Vuex.Store({
     all:null,
     checkStatus:false,
     checkNameArr:[],
-    typeCheck:''
+    typeCheck:'',
+    gotoWorkTime:null,
+    leaveWorkTime:null
   },
   mutations: {
     getTCollections(state,collections){
@@ -97,6 +99,26 @@ export default new Vuex.Store({
     // 审批类型
     changeType(state,type){
       state.typeCheck = type
+    },
+    // 打卡函数
+    dingTime(state,enter){
+      console.log(enter)
+      let obj = null
+        if(!state.teacherCollections.myattendencerecords.length){
+          obj = {
+            go:enter,
+            leave:'',
+            status:0,
+          }
+          state.teacherCollections.myattendencerecords.push(obj)
+          
+        }else{
+          state.teacherCollections.myattendencerecords[0].leave = enter
+        }
+        
+       
+        
+      
     }
   },
   actions: {
@@ -333,6 +355,17 @@ export default new Vuex.Store({
     // 审批类型
     changeType({commit},type){
       commit('changeType',type)
+    },
+    // 打卡
+    dingTime({commit,state},type){
+      let timestamp = (new Date()).getTime().toString().substring(0,10);
+      console.log(timestamp);
+      axios.get(`https://restapi.amap.com/v4/geofence/status?key=7a9171ea2feb1523dc2468448c94bb8e&diu=${state.teacherCollections.TCardId.substring(0,15)}&locations=120.098710,30.301700,${timestamp}`).then(res=>{
+       console.log(res.data.data.fencing_event_list[0].enter_time);
+       
+          commit('dingTime',res.data.data.fencing_event_list[0].enter_time)
+        
+      })
     }
   }
 });
